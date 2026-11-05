@@ -129,7 +129,7 @@ export function FullscreenNavOverlay({ isOpen, onClose }: FullscreenNavOverlayPr
   };
 
   return (
-    <AnimatePresence mode="wait">
+    <AnimatePresence>
       {isOpen && (
         <>
           {/* Layer 1: Orange Accent Sweep Curtain */}

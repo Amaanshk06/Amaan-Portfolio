@@ -25,8 +25,8 @@ export function ImpactSection() {
 
   // Kinetic horizontal scroll drift for watermark & parallax columns
   const xWatermark = useTransform(smoothProgress, [0, 1], [100, -100]);
-  const yCol1 = useTransform(smoothProgress, [0, 1], [30, -30]);
-  const yCol2 = useTransform(smoothProgress, [0, 1], [50, -50]);
+  const yCol1 = useTransform(smoothProgress, [0, 1], [20, -20]);
+  const yCol2 = useTransform(smoothProgress, [0, 1], [20, -20]);
   const yCol3 = useTransform(smoothProgress, [0, 1], [20, -20]);
 
   return (
@@ -101,15 +101,15 @@ export function ImpactSection() {
         {/* 3 Columns Layout with Parallax */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
           {/* Column 1: Metrics Cards with Animated Counters (4 cols) */}
-          <motion.div style={{ y: yCol1 }} className="lg:col-span-4 flex flex-col gap-6 order-2 lg:order-1">
+          <motion.div style={{ y: yCol1 }} className="lg:col-span-4 flex flex-col gap-6 order-2 lg:order-1 h-full">
             {/* Metric 1 */}
-            <TiltCard tiltIntensity={5}>
+            <TiltCard tiltIntensity={5} className="flex-1 flex flex-col">
               <motion.div
                 initial={{ opacity: 0, x: -40 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: false, amount: 0.2 }}
                 transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-                className="p-8 rounded-3xl bg-[#f9fafb] border border-gray-200 hover:border-[#eb5424] hover:shadow-xl transition-all duration-300 flex flex-col justify-between group h-full"
+                className="p-8 rounded-3xl bg-[#f9fafb] border border-gray-200 hover:border-[#eb5424] hover:shadow-xl transition-all duration-300 flex flex-col justify-between group h-full flex-1"
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
@@ -132,13 +132,13 @@ export function ImpactSection() {
             </TiltCard>
 
             {/* Metric 2 */}
-            <TiltCard tiltIntensity={5}>
+            <TiltCard tiltIntensity={5} className="flex-1 flex flex-col">
               <motion.div
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: false, amount: 0.2 }}
                 transition={{ duration: 0.7, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-                className="p-8 rounded-3xl bg-[#f9fafb] border border-gray-200 hover:border-[#eb5424] hover:shadow-xl transition-all duration-300 flex flex-col justify-between group h-full"
+                className="p-8 rounded-3xl bg-[#f9fafb] border border-gray-200 hover:border-[#eb5424] hover:shadow-xl transition-all duration-300 flex flex-col justify-between group h-full flex-1"
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
@@ -161,16 +161,16 @@ export function ImpactSection() {
             </TiltCard>
           </motion.div>
 
-          {/* Column 2: Center Clients & Testimonial with Parallax (4 cols) */}
-          <motion.div style={{ y: yCol2 }} className="lg:col-span-4 flex flex-col gap-6 order-3 lg:order-2">
+          {/* Column 2: Center Clients & Testimonial with Parallax (4 cols) - ALIGNED FLUSH WITH COL 1 & 3 */}
+          <motion.div style={{ y: yCol2 }} className="lg:col-span-4 flex flex-col gap-6 order-3 lg:order-2 h-full">
             {/* Top: 25+ Brands Served Card */}
-            <TiltCard tiltIntensity={5}>
+            <TiltCard tiltIntensity={5} className="flex-1 flex flex-col">
               <motion.div
                 initial={{ opacity: 0, y: 50, scale: 0.95 }}
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
                 viewport={{ once: false, amount: 0.2 }}
                 transition={{ duration: 0.7, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
-                className="p-8 rounded-3xl bg-[#f9fafb] border border-gray-200 hover:border-[#eb5424] hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
+                className="p-8 rounded-3xl bg-[#f9fafb] border border-gray-200 hover:border-[#eb5424] hover:shadow-xl transition-all duration-300 flex flex-col justify-between group h-full flex-1"
               >
                 <div className="flex items-center justify-between mb-6">
                   <span className="font-mono text-xs font-bold uppercase tracking-wider text-[#eb5424]">
@@ -206,13 +206,13 @@ export function ImpactSection() {
             </TiltCard>
 
             {/* Bottom: Client Quote Card */}
-            <TiltCard tiltIntensity={5}>
+            <TiltCard tiltIntensity={5} className="flex-1 flex flex-col">
               <motion.div
                 initial={{ opacity: 0, y: 55 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: false, amount: 0.2 }}
                 transition={{ duration: 0.7, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
-                className="p-8 rounded-3xl bg-[#0a0a0a] text-white flex-1 flex flex-col justify-between relative overflow-hidden shadow-xl"
+                className="p-8 rounded-3xl bg-[#0a0a0a] text-white flex-1 flex flex-col justify-between relative overflow-hidden shadow-xl h-full"
               >
                 <div className="absolute top-0 right-0 w-32 h-32 bg-[#eb5424]/10 rounded-full blur-2xl pointer-events-none" />
 
@@ -242,14 +242,14 @@ export function ImpactSection() {
           </motion.div>
 
           {/* Column 3: Right Visual Character / Identity Card with Clip-Path Reveal (4 cols) - FIRST ON MOBILE */}
-          <motion.div style={{ y: yCol3 }} className="lg:col-span-4 flex order-1 lg:order-3">
-            <TiltCard tiltIntensity={6} className="w-full">
+          <motion.div style={{ y: yCol3 }} className="lg:col-span-4 flex flex-col order-1 lg:order-3 h-full">
+            <TiltCard tiltIntensity={6} className="w-full h-full flex-1 flex flex-col">
               <motion.div
                 initial={{ opacity: 0, x: 40 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: false, amount: 0.2 }}
                 transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-                className="relative w-full rounded-3xl overflow-hidden bg-gradient-to-b from-[#eb5424] to-[#c23e15] text-white p-8 flex flex-col justify-between shadow-2xl group min-h-[460px] h-full"
+                className="relative w-full rounded-3xl overflow-hidden bg-gradient-to-b from-[#eb5424] to-[#c23e15] text-white p-8 flex flex-col justify-between shadow-2xl group min-h-[460px] h-full flex-1"
               >
                 {/* Corner Registration Marks ⌜ ⌝ ⌞ ⌟ */}
                 <div className="absolute top-4 left-4 z-10 text-xs font-mono text-white/60">⌜</div>

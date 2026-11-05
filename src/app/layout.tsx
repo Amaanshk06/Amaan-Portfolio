@@ -39,6 +39,14 @@ export const metadata: Metadata = {
     description:
       "Explore the portfolio of Amaan Shaikh, a web developer with 2 years of experience in React.js, Next.js, JavaScript, WordPress, Shopify, HTML, and CSS.",
   },
+  icons: {
+    icon: [
+      { url: "/cartoon_hero_trans.png", type: "image/png" },
+      { url: "/favicon.png", type: "image/png" },
+    ],
+    shortcut: "/cartoon_hero_trans.png",
+    apple: "/cartoon_hero_trans.png",
+  },
 };
 
 export default function RootLayout({
@@ -49,6 +57,8 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <link rel="icon" href="/cartoon_hero_trans.png" type="image/png" sizes="any" />
+        <link rel="apple-touch-icon" href="/cartoon_hero_trans.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link

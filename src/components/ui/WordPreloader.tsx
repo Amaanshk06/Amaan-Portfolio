@@ -9,8 +9,13 @@ interface WordPreloaderProps {
 }
 
 export function WordPreloader({ onComplete }: WordPreloaderProps) {
+  const [mounted, setMounted] = useState(false);
   const [isFinished, setIsFinished] = useState(false);
   const [step, setStep] = useState(1); // 1 = Brand Name, 2 = Tagline
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   // Skip handler (click, ESC, or Space)
   const handleSkip = () => {
@@ -55,6 +60,8 @@ export function WordPreloader({ onComplete }: WordPreloaderProps) {
       clearTimeout(exitTimer);
     };
   }, [isFinished, onComplete]);
+
+  if (!mounted) return null;
 
   return (
     <AnimatePresence>

@@ -165,33 +165,37 @@ export function ReviewsSection() {
         </div>
 
         {/* Swiper.js Infinite Horizontal Testimonial Carousel */}
+        {/* Carousel Container - Exactly 3 Cards in View, 1 Card Sweep Per Transition */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false, amount: 0.15 }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className="relative testimonial-swiper-wrapper"
+          className="relative testimonial-swiper-wrapper overflow-hidden rounded-3xl"
         >
           <Swiper
             onSwiper={setSwiperInstance}
             modules={[Autoplay, Navigation, Pagination]}
             loop={true}
             grabCursor={true}
-            speed={800}
+            speed={650}
             autoplay={{
-              delay: 3500,
+              delay: 3800,
               disableOnInteraction: false,
               pauseOnMouseEnter: true,
             }}
             spaceBetween={24}
             slidesPerView={1}
+            slidesPerGroup={1}
             breakpoints={{
               640: {
                 slidesPerView: 2,
+                slidesPerGroup: 1,
                 spaceBetween: 24,
               },
               1024: {
                 slidesPerView: 3,
+                slidesPerGroup: 1,
                 spaceBetween: 28,
               },
             }}
@@ -201,7 +205,7 @@ export function ReviewsSection() {
               bulletClass: "inline-block w-2.5 h-2.5 rounded-full bg-gray-200 transition-all duration-300 mx-1 cursor-pointer",
               bulletActiveClass: "!w-8 !bg-[#eb5424] !rounded-full shadow-sm",
             }}
-            className="pb-10 !overflow-visible"
+            className="pb-10 overflow-hidden"
           >
             {reviews.map((review) => (
               <SwiperSlide key={review.id} className="h-auto">

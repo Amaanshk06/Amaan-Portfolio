@@ -3,7 +3,7 @@
 import { useState, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, CheckCircle2 } from "lucide-react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
@@ -251,8 +251,8 @@ export function ServicesSection() {
           </div>
         </div>
 
-        {/* PINNED CARD PRESENTATION AREA - Responsive & snug to prevent bottom clipping */}
-        <div className="relative z-10 max-w-5xl w-full mx-auto flex-1 flex items-center justify-center my-auto min-h-[290px] sm:min-h-[340px] lg:min-h-[380px] max-h-[390px] lg:max-h-[420px]">
+        {/* PINNED CARD PRESENTATION AREA - Responsive & snug with rich informational data */}
+        <div className="relative z-10 max-w-5xl w-full mx-auto flex-1 flex items-center justify-center my-auto min-h-[380px] sm:min-h-[420px] lg:min-h-[460px] max-h-[490px] lg:max-h-[520px]">
           {servicesData.map((service, index) => (
             <div
               key={service.id}
@@ -262,8 +262,8 @@ export function ServicesSection() {
               className="absolute inset-0 w-full h-full rounded-2xl sm:rounded-3xl bg-[#fcfcfc] border border-gray-200/90 shadow-[0_-8px_30px_rgba(0,0,0,0.06),0_20px_50px_rgba(0,0,0,0.12)] overflow-hidden flex flex-col-reverse lg:grid lg:grid-cols-12 will-change-transform"
               style={{ zIndex: index + 1 }}
             >
-              {/* Left Column: Specs, Description, Tags, Action */}
-              <div className="p-3.5 sm:p-5 lg:p-6 lg:col-span-7 flex flex-col justify-between h-full">
+              {/* Left Column: Specs, Description, Deliverables, Tags, Action */}
+              <div className="p-4 sm:p-6 lg:p-7 lg:col-span-7 flex flex-col justify-between h-full">
                 <FadeContent
                   key={`${service.id}-${activeStep === index}`}
                   effect="focus"
@@ -273,12 +273,12 @@ export function ServicesSection() {
                   trigger="mount"
                 >
                   {/* Service Number & Subtitle */}
-                  <div className="flex items-center justify-between gap-3 mb-1 sm:mb-1.5">
+                  <div className="flex items-center justify-between gap-3 mb-2">
                     <div className="flex items-center gap-2">
                       <span className="font-mono text-xs font-black text-[#eb5424] px-2 py-0.5 rounded bg-[#eb5424]/10">
                         {service.num}
                       </span>
-                      <span className="font-mono text-[11px] sm:text-xs font-bold uppercase tracking-wider text-gray-400">
+                      <span className="font-mono text-[11px] sm:text-xs font-bold uppercase tracking-wider text-gray-500">
                         {service.subtitle}
                       </span>
                     </div>
@@ -288,21 +288,36 @@ export function ServicesSection() {
                   </div>
 
                   {/* Service Title */}
-                  <h3 className="text-base sm:text-xl lg:text-2xl font-black uppercase tracking-tight text-[#0a0a0a] font-sans mb-1 sm:mb-1.5 leading-tight">
+                  <h3 className="text-lg sm:text-xl lg:text-2xl font-black uppercase tracking-tight text-[#0a0a0a] font-sans mb-2 leading-tight">
                     {service.title}
                   </h3>
 
-                  {/* Description */}
-                  <p className="text-xs sm:text-[13px] text-gray-600 font-sans leading-relaxed mb-1.5 sm:mb-2 line-clamp-2">
+                  {/* Rich Description */}
+                  <p className="text-xs sm:text-[13px] text-gray-600 font-sans leading-relaxed mb-3">
                     {service.description}
                   </p>
 
-                  {/* Tags */}
-                  <div className="hidden xs:flex flex-wrap gap-1 sm:gap-1.5 mb-1.5 sm:mb-2">
+                  {/* Key Deliverables & Specifications Grid */}
+                  <div className="my-2 py-2.5 border-t border-b border-gray-100">
+                    <div className="text-[10px] font-mono font-bold uppercase tracking-widest text-gray-400 mb-2">
+                      KEY DELIVERABLES &amp; ARCHITECTURE
+                    </div>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                      {service.deliverables.slice(0, 4).map((deliverable, dIdx) => (
+                        <div key={dIdx} className="flex items-start gap-1.5 text-xs text-gray-700">
+                          <CheckCircle2 className="w-3.5 h-3.5 text-[#eb5424] shrink-0 mt-0.5" />
+                          <span className="font-sans leading-snug">{deliverable}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Technical Tags */}
+                  <div className="hidden xs:flex flex-wrap gap-1.5 mb-2 pt-1">
                     {service.tags.slice(0, 4).map((tag) => (
                       <span
                         key={tag}
-                        className="px-2 py-0.5 rounded-md sm:rounded-lg bg-white border border-gray-200 text-[10px] sm:text-[11px] font-mono font-medium text-gray-800 shadow-2xs"
+                        className="px-2 py-0.5 rounded-md bg-white border border-gray-200 text-[10px] sm:text-[11px] font-mono font-medium text-gray-800 shadow-2xs"
                       >
                         {tag}
                       </span>
@@ -311,7 +326,7 @@ export function ServicesSection() {
                 </FadeContent>
 
                 {/* Bottom Row Action */}
-                <div className="pt-1.5 sm:pt-2 border-t border-gray-200/80 flex items-center justify-between mt-auto shrink-0">
+                <div className="pt-2 sm:pt-3 border-t border-gray-200/80 flex items-center justify-between mt-auto shrink-0">
                   <Link
                     href={`/services#${service.id}`}
                     className="inline-flex items-center gap-2 font-mono text-xs font-bold uppercase tracking-wider text-[#eb5424] hover:text-black transition-colors group"

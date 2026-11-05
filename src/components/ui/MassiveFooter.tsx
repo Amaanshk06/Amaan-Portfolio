@@ -213,12 +213,12 @@ export function MassiveFooter() {
           </div>
 
           {/* Massive Wordmark */}
-          <div className="lg:col-span-7 flex justify-center lg:justify-end overflow-hidden py-2 w-full text-center lg:text-right">
+          <div className="lg:col-span-7 flex justify-center lg:justify-end overflow-visible py-2 w-full text-center lg:text-right px-2 sm:px-4">
             <motion.div
               style={{ scale: scaleBrand }}
-              className="text-4xl xs:text-5xl sm:text-7xl md:text-8xl lg:text-[9rem] xl:text-[10rem] font-black uppercase tracking-tight text-[#0a0a0a] font-sans leading-[0.9] pb-3 cursor-default hover:text-[#eb5424] transition-colors duration-500 select-none whitespace-nowrap text-center lg:text-right"
+              className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-[7.5rem] xl:text-[9rem] font-black uppercase tracking-tight text-[#0a0a0a] font-sans leading-[0.9] pb-3 pt-1 pl-4 pr-3 cursor-default hover:text-[#eb5424] transition-colors duration-500 select-none whitespace-nowrap text-center lg:text-right inline-block"
             >
-              AMAAN<span className="text-[0.4em] align-super ml-1 text-[#eb5424]">®</span>
+              AMAAN<span className="text-[0.4em] align-super ml-1.5 text-[#eb5424]">®</span>
             </motion.div>
           </div>
         </div>

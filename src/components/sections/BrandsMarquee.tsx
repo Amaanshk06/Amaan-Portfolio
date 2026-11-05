@@ -32,12 +32,12 @@ export function BrandsMarquee() {
   ];
 
   return (
-    <section ref={containerRef} className="py-10 bg-white border-b border-gray-100 overflow-hidden relative z-20">
+    <section ref={containerRef} className="py-8 sm:py-10 bg-white border-b border-gray-100 overflow-hidden relative z-20">
       <div className="max-w-7xl mx-auto px-6 sm:px-12 flex flex-col md:flex-row md:items-center gap-6">
         {/* Left Label with Reversible Motion */}
         <motion.div
-          initial={{ x: -20 }}
-          whileInView={{ x: 0 }}
+          initial={{ x: -20, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           className="shrink-0 font-mono text-[11px] sm:text-xs font-bold text-gray-400 uppercase tracking-widest md:border-r border-gray-200 md:pr-8"
@@ -47,20 +47,19 @@ export function BrandsMarquee() {
         </motion.div>
 
         {/* Marquee Container with Scroll Velocity Interaction */}
-        <div className="overflow-hidden relative flex-1 mask-fade">
-          <motion.div
-            style={{ x: xOffset }}
-            className="flex items-center gap-12 sm:gap-16 animate-marquee whitespace-nowrap"
-          >
-            {[...projects, ...projects].map((projectName, idx) => (
-              <div
-                key={`${projectName}-${idx}`}
-                className="flex items-center gap-3 text-sm sm:text-base font-extrabold uppercase tracking-tight text-gray-400 hover:text-black transition-colors select-none cursor-default font-sans"
-              >
-                <span className="text-[#eb5424] text-xs">✦</span>
-                <span>{projectName}</span>
-              </div>
-            ))}
+        <div className="overflow-hidden relative flex-1 min-w-0 mask-fade">
+          <motion.div style={{ x: xOffset }} className="w-full overflow-hidden">
+            <div className="flex items-center gap-10 sm:gap-14 animate-marquee whitespace-nowrap will-change-transform">
+              {[...projects, ...projects].map((projectName, idx) => (
+                <div
+                  key={`${projectName}-${idx}`}
+                  className="flex items-center gap-2.5 text-xs sm:text-sm md:text-base font-extrabold uppercase tracking-tight text-gray-400 hover:text-black transition-colors select-none cursor-default font-sans shrink-0 whitespace-nowrap"
+                >
+                  <span className="text-[#eb5424] text-xs">✦</span>
+                  <span>{projectName}</span>
+                </div>
+              ))}
+            </div>
           </motion.div>
         </div>
       </div>

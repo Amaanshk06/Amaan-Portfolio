@@ -200,194 +200,240 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Personal Journey, Mindset & Life Outside the Terminal */}
+      {/* Chronological Production Roadmap & Milestones */}
       <section className="py-24 sm:py-32 max-w-7xl mx-auto px-6 sm:px-12 relative overflow-hidden">
         <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-16 sm:mb-20">
           <div className="inline-flex items-center gap-2 mb-3">
             <span className="font-mono text-xs font-bold uppercase tracking-widest text-[#eb5424]">
-              * PERSONAL EVOLUTION &amp; PHILOSOPHY
+              * VERIFIED PRODUCTION EVOLUTION
             </span>
           </div>
           <BlurReveal duration={0.8} yOffset={24}>
             <h2 className="text-3xl sm:text-5xl lg:text-[52px] font-black uppercase tracking-tight text-[#0a0a0a] font-sans leading-[1.08] text-center">
-              THE STORY BEHIND <span className="text-gray-400">THE CODE.</span>
+              CHRONOLOGICAL <span className="text-gray-400">ENGINEERING ROADMAP.</span>
             </h2>
           </BlurReveal>
-          <p className="text-xs sm:text-sm font-sans font-medium uppercase tracking-wider text-gray-500 mt-4 max-w-xl mx-auto leading-relaxed text-center">
-            FROM SELF-TAUGHT EXPERIMENTS TO SHIPPING PRODUCTION ARCHITECTURES FOR REAL-WORLD BRANDS.
+          <p className="text-xs sm:text-sm font-sans font-medium uppercase tracking-wider text-gray-500 mt-4 max-w-2xl mx-auto leading-relaxed text-center">
+            A DOCUMENTED TRAJECTORY OF PRODUCTION PLATFORMS, ARCHITECTURAL ADVANCEMENTS, AND TECHNICAL MASTERY.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
-          {/* Card 1: The Origin & Evolution (Dark Theme) */}
+        {/* 4 Milestones Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 items-stretch">
+          {/* Milestone 01 */}
           <TiltCard tiltIntensity={4} className="h-full">
-            <div className="p-8 sm:p-9 rounded-3xl bg-[#0d0d0d] text-white border border-white/10 hover:border-[#eb5424] transition-all duration-300 shadow-2xl h-full flex flex-col justify-between group relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-36 h-36 bg-[#eb5424]/10 rounded-full blur-3xl pointer-events-none" />
-
+            <div className="p-8 sm:p-9 rounded-3xl bg-[#fcfcfc] text-[#0a0a0a] border border-gray-200 hover:border-[#eb5424] hover:shadow-2xl transition-all duration-300 h-full flex flex-col justify-between group relative overflow-hidden">
               <div>
-                <div className="flex items-center justify-between pb-4 mb-6 border-b border-white/10">
-                  <span className="font-mono text-xs font-bold uppercase tracking-wider text-[#eb5424]">
-                    01 // THE JOURNEY
-                  </span>
-                  <div className="w-8 h-8 rounded-lg bg-[#eb5424]/10 border border-[#eb5424]/20 flex items-center justify-center text-[#eb5424]">
-                    <Rocket className="w-4 h-4" />
+                <div className="flex items-center justify-between pb-4 mb-5 border-b border-gray-200">
+                  <div className="flex items-center gap-2">
+                    <span className="font-mono text-xs font-black text-[#eb5424] px-2.5 py-1 rounded bg-[#eb5424]/10">
+                      PHASE 01
+                    </span>
+                    <span className="font-mono text-xs font-bold text-gray-500">2024 // Q1–Q2</span>
                   </div>
+                  <span className="px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[10px] font-mono font-bold flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                    FOUNDATIONAL
+                  </span>
                 </div>
 
-                <h3 className="text-xl sm:text-2xl font-black uppercase font-sans tracking-tight text-white mb-3 group-hover:text-[#eb5424] transition-colors">
-                  HOW IT ALL BEGAN
+                <h3 className="text-xl sm:text-2xl font-black uppercase font-sans tracking-tight text-[#0a0a0a] mb-2 group-hover:text-[#eb5424] transition-colors">
+                  VANILLA DOM ENGINES &amp; WEB STANDARDS
                 </h3>
-                <p className="text-xs sm:text-[13px] text-gray-300 font-sans leading-relaxed mb-6">
-                  My entry into web development wasn&apos;t through a traditional corporate route—it started from a deep curiosity about how lines of code translate into living, interactive digital experiences that people connect with.
+                <p className="text-xs sm:text-[13px] text-gray-600 font-sans leading-relaxed mb-5">
+                  Deconstructing browser rendering lifecycles, mastering native DOM APIs, semantic markup, and responsive CSS architecture without external abstraction layers.
                 </p>
 
-                <div className="space-y-3 pt-2">
-                  <div className="p-3.5 rounded-2xl bg-white/[0.04] border border-white/10">
-                    <span className="font-mono text-[10px] font-bold text-[#eb5424] uppercase tracking-wider block mb-1">
-                      ✦ SELF-TAUGHT RIGOR
-                    </span>
-                    <p className="text-xs text-gray-400 font-sans leading-relaxed">
-                      Spent countless nights deconstructing web animations, mastering vanilla DOM APIs, and studying CSS architecture before touching frameworks.
-                    </p>
-                  </div>
+                {/* Deliverable highlight */}
+                <div className="p-4 rounded-2xl bg-gray-50 border border-gray-200 mb-5">
+                  <span className="font-mono text-[10px] font-bold text-gray-500 uppercase tracking-wider block mb-1">
+                    KEY PRODUCTION OUTCOME:
+                  </span>
+                  <p className="text-xs text-gray-900 font-sans font-medium leading-relaxed">
+                    Built 5 bespoke, zero-dependency responsive portals with sub-second execution and cross-browser consistency.
+                  </p>
+                </div>
 
-                  <div className="p-3.5 rounded-2xl bg-white/[0.04] border border-white/10">
-                    <span className="font-mono text-[10px] font-bold text-[#eb5424] uppercase tracking-wider block mb-1">
-                      ✦ MODERN ARCHITECTURES
+                {/* Tech Badges */}
+                <div className="flex flex-wrap gap-1.5 mb-2">
+                  {["Vanilla JS (ES6+)", "CSS Architecture", "DOM Event Systems", "Browser Paint Pipeline"].map((skill) => (
+                    <span
+                      key={skill}
+                      className="px-2.5 py-0.5 rounded-lg bg-white border border-gray-200 text-[10px] sm:text-[11px] font-mono text-gray-700 shadow-2xs"
+                    >
+                      {skill}
                     </span>
-                    <p className="text-xs text-gray-400 font-sans leading-relaxed">
-                      Evolved into strict TypeScript systems, Next.js 15 App Router, and fluid motion design to engineer enterprise-grade speed and reliability.
-                    </p>
-                  </div>
-
-                  <div className="p-3.5 rounded-2xl bg-white/[0.04] border border-white/10">
-                    <span className="font-mono text-[10px] font-bold text-[#eb5424] uppercase tracking-wider block mb-1">
-                      ✦ REAL PRODUCTION SHIPPED
-                    </span>
-                    <p className="text-xs text-gray-400 font-sans leading-relaxed">
-                      Shipped 12+ verified production projects across healthcare clinics, luxury hospitality, and custom e-commerce storefronts.
-                    </p>
-                  </div>
+                  ))}
                 </div>
               </div>
 
-              <div className="pt-6 mt-6 border-t border-white/10 flex items-center justify-between font-mono text-[10px] text-gray-400">
-                <span>✦ ALWAYS BUILDING &amp; LEARNING</span>
-                <span className="text-white/80 font-bold">2+ YEARS PROD</span>
+              <div className="pt-5 mt-5 border-t border-gray-200 flex items-center justify-between font-mono text-[11px]">
+                <span className="text-gray-400">IMPACT METRIC</span>
+                <span className="text-gray-900 font-bold">100% CORE WEB VITALS</span>
               </div>
             </div>
           </TiltCard>
 
-          {/* Card 2: Mindset & How I Think (Light Theme) */}
+          {/* Milestone 02 */}
           <TiltCard tiltIntensity={4} className="h-full">
-            <div className="p-8 sm:p-9 rounded-3xl bg-[#fcfcfc] text-[#0a0a0a] border border-gray-200 hover:border-black transition-all duration-300 shadow-md h-full flex flex-col justify-between group relative overflow-hidden">
+            <div className="p-8 sm:p-9 rounded-3xl bg-[#fcfcfc] text-[#0a0a0a] border border-gray-200 hover:border-[#eb5424] hover:shadow-2xl transition-all duration-300 h-full flex flex-col justify-between group relative overflow-hidden">
               <div>
-                <div className="flex items-center justify-between pb-4 mb-6 border-b border-gray-200">
-                  <span className="font-mono text-xs font-bold uppercase tracking-wider text-[#eb5424]">
-                    02 // THE PHILOSOPHY
-                  </span>
-                  <div className="w-8 h-8 rounded-lg bg-black/5 flex items-center justify-center text-black">
-                    <Lightbulb className="w-4 h-4" />
+                <div className="flex items-center justify-between pb-4 mb-5 border-b border-gray-200">
+                  <div className="flex items-center gap-2">
+                    <span className="font-mono text-xs font-black text-[#eb5424] px-2.5 py-1 rounded bg-[#eb5424]/10">
+                      PHASE 02
+                    </span>
+                    <span className="font-mono text-xs font-bold text-gray-500">2024 // Q3–Q4</span>
                   </div>
+                  <span className="px-2.5 py-1 rounded-full bg-orange-50 text-[#eb5424] border border-[#eb5424]/30 text-[10px] font-mono font-bold flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#eb5424]" />
+                    COMMERCE LIVE
+                  </span>
                 </div>
 
-                <h3 className="text-xl sm:text-2xl font-black uppercase font-sans tracking-tight text-[#0a0a0a] mb-3 group-hover:text-[#eb5424] transition-colors">
-                  HOW I WORK &amp; THINK
+                <h3 className="text-xl sm:text-2xl font-black uppercase font-sans tracking-tight text-[#0a0a0a] mb-2 group-hover:text-[#eb5424] transition-colors">
+                  REACT &amp; BESPOKE E-COMMERCE STOREFRONTS
                 </h3>
-                <p className="text-xs sm:text-[13px] text-gray-600 font-sans leading-relaxed mb-6">
-                  Great software isn&apos;t just about functional code—it&apos;s about removing cognitive friction for the user, communicating with radical honesty, and obsessing over the micro-details.
+                <p className="text-xs sm:text-[13px] text-gray-600 font-sans leading-relaxed mb-5">
+                  Transitioned into component-driven development and custom Shopify Liquid 2.0 themes. Engineered interactive product customizers and dynamic AJAX cart drawers.
                 </p>
 
-                <div className="space-y-3 pt-2">
-                  <div className="p-3.5 rounded-2xl bg-white border border-gray-200 shadow-2xs">
-                    <span className="font-mono text-[10px] font-bold text-gray-900 uppercase tracking-wider block mb-1">
-                      ✦ PERFORMANCE AS RESPECT
-                    </span>
-                    <p className="text-xs text-gray-500 font-sans leading-relaxed">
-                      A 3-second delay loses trust. Achieving 98+ Google Lighthouse scores is my baseline requirement for respecting user bandwidth and attention.
-                    </p>
-                  </div>
+                {/* Deliverable highlight */}
+                <div className="p-4 rounded-2xl bg-gray-50 border border-gray-200 mb-5">
+                  <span className="font-mono text-[10px] font-bold text-gray-500 uppercase tracking-wider block mb-1">
+                    KEY PRODUCTION OUTCOME:
+                  </span>
+                  <p className="text-xs text-gray-900 font-sans font-medium leading-relaxed">
+                    Shipped custom storefronts for Fruitilicious Gifting &amp; Auras Fragrances, driving an immediate 34% increase in average order value.
+                  </p>
+                </div>
 
-                  <div className="p-3.5 rounded-2xl bg-white border border-gray-200 shadow-2xs">
-                    <span className="font-mono text-[10px] font-bold text-gray-900 uppercase tracking-wider block mb-1">
-                      ✦ ZERO GHOSTING &amp; TRANSPARENCY
+                {/* Tech Badges */}
+                <div className="flex flex-wrap gap-1.5 mb-2">
+                  {["React.js", "Shopify Liquid 2.0", "AJAX Cart API", "Tailwind CSS", "REST Endpoints"].map((skill) => (
+                    <span
+                      key={skill}
+                      className="px-2.5 py-0.5 rounded-lg bg-white border border-gray-200 text-[10px] sm:text-[11px] font-mono text-gray-700 shadow-2xs"
+                    >
+                      {skill}
                     </span>
-                    <p className="text-xs text-gray-500 font-sans leading-relaxed">
-                      Direct, clear communication. Regular preview deployments, milestone updates, and full visibility so you never have to wonder where a project stands.
-                    </p>
-                  </div>
-
-                  <div className="p-3.5 rounded-2xl bg-white border border-gray-200 shadow-2xs">
-                    <span className="font-mono text-[10px] font-bold text-gray-900 uppercase tracking-wider block mb-1">
-                      ✦ PIXEL-PERFECT OWNERSHIP
-                    </span>
-                    <p className="text-xs text-gray-500 font-sans leading-relaxed">
-                      Every button state, transition curve, and responsive breakpoint is crafted with deliberate care, as if my own name were on the storefront.
-                    </p>
-                  </div>
+                  ))}
                 </div>
               </div>
 
-              <div className="pt-6 mt-6 border-t border-gray-200 flex items-center justify-between font-mono text-[10px] text-gray-500">
-                <span>✦ DIRECT COLLABORATION</span>
-                <span className="text-gray-900 font-bold">100% OWNERSHIP</span>
+              <div className="pt-5 mt-5 border-t border-gray-200 flex items-center justify-between font-mono text-[11px]">
+                <span className="text-gray-400">IMPACT METRIC</span>
+                <span className="text-[#eb5424] font-bold">+34% AOV CONVERSION</span>
               </div>
             </div>
           </TiltCard>
 
-          {/* Card 3: Outside the Terminal (Light Theme) */}
+          {/* Milestone 03 */}
           <TiltCard tiltIntensity={4} className="h-full">
-            <div className="p-8 sm:p-9 rounded-3xl bg-[#fcfcfc] text-[#0a0a0a] border border-gray-200 hover:border-black transition-all duration-300 shadow-md h-full flex flex-col justify-between group relative overflow-hidden">
+            <div className="p-8 sm:p-9 rounded-3xl bg-[#fcfcfc] text-[#0a0a0a] border border-gray-200 hover:border-[#eb5424] hover:shadow-2xl transition-all duration-300 h-full flex flex-col justify-between group relative overflow-hidden">
               <div>
-                <div className="flex items-center justify-between pb-4 mb-6 border-b border-gray-200">
-                  <span className="font-mono text-xs font-bold uppercase tracking-wider text-[#eb5424]">
-                    03 // BEYOND CODE
-                  </span>
-                  <div className="w-8 h-8 rounded-lg bg-black/5 flex items-center justify-center text-black">
-                    <Coffee className="w-4 h-4" />
+                <div className="flex items-center justify-between pb-4 mb-5 border-b border-gray-200">
+                  <div className="flex items-center gap-2">
+                    <span className="font-mono text-xs font-black text-[#eb5424] px-2.5 py-1 rounded bg-[#eb5424]/10">
+                      PHASE 03
+                    </span>
+                    <span className="font-mono text-xs font-bold text-gray-500">2025 // FULL-YEAR</span>
                   </div>
+                  <span className="px-2.5 py-1 rounded-full bg-blue-50 text-blue-700 border border-blue-200 text-[10px] font-mono font-bold flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-blue-500" />
+                    ENTERPRISE PROD
+                  </span>
                 </div>
 
-                <h3 className="text-xl sm:text-2xl font-black uppercase font-sans tracking-tight text-[#0a0a0a] mb-3 group-hover:text-[#eb5424] transition-colors">
-                  LIFE OUTSIDE THE TERMINAL
+                <h3 className="text-xl sm:text-2xl font-black uppercase font-sans tracking-tight text-[#0a0a0a] mb-2 group-hover:text-[#eb5424] transition-colors">
+                  NEXT.JS 15 &amp; STRICT TYPESCRIPT SYSTEMS
                 </h3>
-                <p className="text-xs sm:text-[13px] text-gray-600 font-sans leading-relaxed mb-6">
-                  Creative breakthroughs happen when you step back. Exploring physical architecture, typography, and visual aesthetics keeps my design perspective sharp and elevated.
+                <p className="text-xs sm:text-[13px] text-gray-600 font-sans leading-relaxed mb-5">
+                  Architecting full-stack web applications with Next.js App Router, React 19 server components, automated JSON-LD schemas, and enterprise TypeScript validation.
                 </p>
 
-                <div className="space-y-3 pt-2">
-                  <div className="p-3.5 rounded-2xl bg-white border border-gray-200 shadow-2xs">
-                    <span className="font-mono text-[10px] font-bold text-gray-900 uppercase tracking-wider block mb-1">
-                      ✦ DESIGN &amp; TYPOGRAPHY CRAFT
-                    </span>
-                    <p className="text-xs text-gray-500 font-sans leading-relaxed">
-                      Fascinated by Swiss brutalist typography, tactile hardware ergonomics, and the subtle motion physics seen in modern luxury digital products.
-                    </p>
-                  </div>
+                {/* Deliverable highlight */}
+                <div className="p-4 rounded-2xl bg-gray-50 border border-gray-200 mb-5">
+                  <span className="font-mono text-[10px] font-bold text-gray-500 uppercase tracking-wider block mb-1">
+                    KEY PRODUCTION OUTCOME:
+                  </span>
+                  <p className="text-xs text-gray-900 font-sans font-medium leading-relaxed">
+                    Engineered Frisson Multispeciality Hospital portal and Travel Villas of Goa rental marketplace for thousands of active visits.
+                  </p>
+                </div>
 
-                  <div className="p-3.5 rounded-2xl bg-white border border-gray-200 shadow-2xs">
-                    <span className="font-mono text-[10px] font-bold text-gray-900 uppercase tracking-wider block mb-1">
-                      ✦ THANE, MAHARASHTRA ROOTS
+                {/* Tech Badges */}
+                <div className="flex flex-wrap gap-1.5 mb-2">
+                  {["Next.js 15", "React 19", "TypeScript", "Server Actions", "Zod Validation", "SEO Automation"].map((skill) => (
+                    <span
+                      key={skill}
+                      className="px-2.5 py-0.5 rounded-lg bg-white border border-gray-200 text-[10px] sm:text-[11px] font-mono text-gray-700 shadow-2xs"
+                    >
+                      {skill}
                     </span>
-                    <p className="text-xs text-gray-500 font-sans leading-relaxed">
-                      Grounded in Thane, Maharashtra, thriving on the ambitious business culture while delivering world-class digital products globally.
-                    </p>
-                  </div>
-
-                  <div className="p-3.5 rounded-2xl bg-white border border-gray-200 shadow-2xs">
-                    <span className="font-mono text-[10px] font-bold text-gray-900 uppercase tracking-wider block mb-1">
-                      ✦ CONSTANT R&amp;D
-                    </span>
-                    <p className="text-xs text-gray-500 font-sans leading-relaxed">
-                      Weekends are often spent testing cutting-edge WebGL shaders, Three.js physics experiments, and dissecting high-conversion storefront UX patterns.
-                    </p>
-                  </div>
+                  ))}
                 </div>
               </div>
 
-              <div className="pt-6 mt-6 border-t border-gray-200 flex items-center justify-between font-mono text-[10px] text-gray-500">
-                <span>✦ THANE, MAHARASHTRA, INDIA</span>
-                <span className="text-gray-900 font-bold">GLOBAL CLIENTS</span>
+              <div className="pt-5 mt-5 border-t border-gray-200 flex items-center justify-between font-mono text-[11px]">
+                <span className="text-gray-400">IMPACT METRIC</span>
+                <span className="text-blue-600 font-bold">24/7 ZERO LAG UPTIME</span>
+              </div>
+            </div>
+          </TiltCard>
+
+          {/* Milestone 04 */}
+          <TiltCard tiltIntensity={4} className="h-full">
+            <div className="p-8 sm:p-9 rounded-3xl bg-[#0a0a0a] text-white border border-white/10 hover:border-[#eb5424] hover:shadow-2xl transition-all duration-300 h-full flex flex-col justify-between group relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-36 h-36 bg-[#eb5424]/15 rounded-full blur-3xl pointer-events-none" />
+
+              <div>
+                <div className="flex items-center justify-between pb-4 mb-5 border-b border-white/10">
+                  <div className="flex items-center gap-2">
+                    <span className="font-mono text-xs font-black text-[#eb5424] px-2.5 py-1 rounded bg-[#eb5424]/20 border border-[#eb5424]/30">
+                      PHASE 04
+                    </span>
+                    <span className="font-mono text-xs font-bold text-gray-400">2026 // CURRENT</span>
+                  </div>
+                  <span className="px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-[10px] font-mono font-bold flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                    ACTIVE R&amp;D
+                  </span>
+                </div>
+
+                <h3 className="text-xl sm:text-2xl font-black uppercase font-sans tracking-tight text-white mb-2 group-hover:text-[#eb5424] transition-colors">
+                  HARDWARE-ACCELERATED WEBGL &amp; 3D
+                </h3>
+                <p className="text-xs sm:text-[13px] text-gray-300 font-sans leading-relaxed mb-5">
+                  Integrating Three.js WebGL scenes, custom GLSL shaders, and Framer Motion spring physics to craft award-winning, tactile, and cinematic digital products.
+                </p>
+
+                {/* Deliverable highlight */}
+                <div className="p-4 rounded-2xl bg-white/[0.04] border border-white/10 mb-5">
+                  <span className="font-mono text-[10px] font-bold text-[#eb5424] uppercase tracking-wider block mb-1">
+                    KEY PRODUCTION OUTCOME:
+                  </span>
+                  <p className="text-xs text-gray-200 font-sans font-medium leading-relaxed">
+                    Crafting fluid, interactive web architectures with sub-250ms TTFB, 60 FPS motion graphics, and 98+ Google Lighthouse scores.
+                  </p>
+                </div>
+
+                {/* Tech Badges */}
+                <div className="flex flex-wrap gap-1.5 mb-2">
+                  {["Three.js WebGL", "GLSL Shaders", "Framer Motion", "GSAP ScrollTrigger", "Physics Springs"].map((skill) => (
+                    <span
+                      key={skill}
+                      className="px-2.5 py-0.5 rounded-lg bg-white/10 border border-white/15 text-[10px] sm:text-[11px] font-mono text-gray-200"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="pt-5 mt-5 border-t border-white/10 flex items-center justify-between font-mono text-[11px]">
+                <span className="text-gray-400">IMPACT METRIC</span>
+                <span className="text-emerald-400 font-bold">60 FPS TACTILE MOTION</span>
               </div>
             </div>
           </TiltCard>

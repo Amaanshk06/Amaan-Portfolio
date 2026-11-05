@@ -49,9 +49,11 @@
 }
 
 .animate-marquee {
-  display: flex;
-  width: max-content;
-  animation: marquee 28s linear infinite;
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  width: max-content !important;
+  animation: marquee 32s linear infinite;
 }
 
 .animate-marquee:hover {
@@ -80,4 +82,15 @@
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #eb5424;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }

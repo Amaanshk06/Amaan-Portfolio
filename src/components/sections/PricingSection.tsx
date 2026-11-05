@@ -273,7 +273,7 @@ export function PricingSection() {
 
         {/* 3 Balanced Pricing Cards with Smooth Transitions & Subtle Highlights */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
-          <AnimatePresence mode="wait">
+          <AnimatePresence>
             {activePlans.map((plan, index) => {
               const IconComponent = plan.icon;
 
