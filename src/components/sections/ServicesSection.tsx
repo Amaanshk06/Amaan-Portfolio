@@ -252,7 +252,7 @@ export function ServicesSection() {
         </div>
 
         {/* PINNED CARD PRESENTATION AREA - Responsive & snug with rich informational data */}
-        <div className="relative z-10 max-w-5xl w-full mx-auto flex-1 flex items-center justify-center my-auto min-h-[380px] sm:min-h-[420px] lg:min-h-[460px] max-h-[490px] lg:max-h-[520px]">
+        <div className="relative z-10 max-w-5xl w-full mx-auto flex-1 flex items-center justify-center my-auto min-h-[360px] sm:min-h-[420px] lg:min-h-[460px] max-h-[430px] sm:max-h-[490px] lg:max-h-[520px]">
           {servicesData.map((service, index) => (
             <div
               key={service.id}
@@ -263,7 +263,7 @@ export function ServicesSection() {
               style={{ zIndex: index + 1 }}
             >
               {/* Left Column: Specs, Description, Deliverables, Tags, Action */}
-              <div className="p-4 sm:p-6 lg:p-7 lg:col-span-7 flex flex-col justify-between h-full">
+              <div className="p-3.5 sm:p-6 lg:p-7 lg:col-span-7 flex flex-col justify-between flex-1 min-h-0 overflow-hidden">
                 <FadeContent
                   key={`${service.id}-${activeStep === index}`}
                   effect="focus"
@@ -273,12 +273,12 @@ export function ServicesSection() {
                   trigger="mount"
                 >
                   {/* Service Number & Subtitle */}
-                  <div className="flex items-center justify-between gap-3 mb-2">
-                    <div className="flex items-center gap-2">
-                      <span className="font-mono text-xs font-black text-[#eb5424] px-2 py-0.5 rounded bg-[#eb5424]/10">
+                  <div className="flex items-center justify-between gap-2 mb-1 sm:mb-2">
+                    <div className="flex items-center gap-1.5 sm:gap-2">
+                      <span className="font-mono text-[10px] sm:text-xs font-black text-[#eb5424] px-1.5 sm:px-2 py-0.5 rounded bg-[#eb5424]/10">
                         {service.num}
                       </span>
-                      <span className="font-mono text-[11px] sm:text-xs font-bold uppercase tracking-wider text-gray-500">
+                      <span className="font-mono text-[10px] sm:text-xs font-bold uppercase tracking-wider text-gray-500 truncate max-w-[200px] sm:max-w-none">
                         {service.subtitle}
                       </span>
                     </div>
@@ -288,36 +288,36 @@ export function ServicesSection() {
                   </div>
 
                   {/* Service Title */}
-                  <h3 className="text-lg sm:text-xl lg:text-2xl font-black uppercase tracking-tight text-[#0a0a0a] font-sans mb-2 leading-tight">
+                  <h3 className="text-base sm:text-xl lg:text-2xl font-black uppercase tracking-tight text-[#0a0a0a] font-sans mb-1 sm:mb-2 leading-tight">
                     {service.title}
                   </h3>
 
                   {/* Rich Description */}
-                  <p className="text-xs sm:text-[13px] text-gray-600 font-sans leading-relaxed mb-3">
+                  <p className="text-[11px] sm:text-[13px] text-gray-600 font-sans leading-relaxed line-clamp-2 sm:line-clamp-none mb-2 sm:mb-3">
                     {service.description}
                   </p>
 
                   {/* Key Deliverables & Specifications Grid */}
-                  <div className="my-2 py-2.5 border-t border-b border-gray-100">
-                    <div className="text-[10px] font-mono font-bold uppercase tracking-widest text-gray-400 mb-2">
+                  <div className="my-1 sm:my-2 py-1.5 sm:py-2.5 border-t border-b border-gray-100">
+                    <div className="text-[9px] sm:text-[10px] font-mono font-bold uppercase tracking-widest text-gray-400 mb-1 sm:mb-2">
                       KEY DELIVERABLES &amp; ARCHITECTURE
                     </div>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-1 sm:gap-2">
                       {service.deliverables.slice(0, 4).map((deliverable, dIdx) => (
-                        <div key={dIdx} className="flex items-start gap-1.5 text-xs text-gray-700">
-                          <CheckCircle2 className="w-3.5 h-3.5 text-[#eb5424] shrink-0 mt-0.5" />
-                          <span className="font-sans leading-snug">{deliverable}</span>
+                        <div key={dIdx} className={`flex items-start gap-1.5 text-xs text-gray-700 ${dIdx >= 2 ? "hidden sm:flex" : "flex"}`}>
+                          <CheckCircle2 className="w-3 sm:w-3.5 h-3 sm:h-3.5 text-[#eb5424] shrink-0 mt-0.5" />
+                          <span className="font-sans text-[11px] sm:text-xs leading-snug">{deliverable}</span>
                         </div>
                       ))}
                     </div>
                   </div>
 
                   {/* Technical Tags */}
-                  <div className="hidden xs:flex flex-wrap gap-1.5 mb-2 pt-1">
+                  <div className="hidden xs:flex flex-wrap gap-1 sm:gap-1.5 mb-1 sm:mb-2 pt-0.5 sm:pt-1">
                     {service.tags.slice(0, 4).map((tag) => (
                       <span
                         key={tag}
-                        className="px-2 py-0.5 rounded-md bg-white border border-gray-200 text-[10px] sm:text-[11px] font-mono font-medium text-gray-800 shadow-2xs"
+                        className="px-1.5 sm:px-2 py-0.5 rounded-md bg-white border border-gray-200 text-[9px] sm:text-[11px] font-mono font-medium text-gray-800 shadow-2xs"
                       >
                         {tag}
                       </span>
@@ -326,10 +326,10 @@ export function ServicesSection() {
                 </FadeContent>
 
                 {/* Bottom Row Action */}
-                <div className="pt-2 sm:pt-3 border-t border-gray-200/80 flex items-center justify-between mt-auto shrink-0">
+                <div className="pt-1.5 sm:pt-3 border-t border-gray-200/80 flex items-center justify-between mt-auto shrink-0">
                   <Link
                     href={`/services#${service.id}`}
-                    className="inline-flex items-center gap-2 font-mono text-xs font-bold uppercase tracking-wider text-[#eb5424] hover:text-black transition-colors group"
+                    className="inline-flex items-center gap-1.5 sm:gap-2 font-mono text-[11px] sm:text-xs font-bold uppercase tracking-wider text-[#eb5424] hover:text-black transition-colors group"
                   >
                     <span>LEARN PROCESS &amp; SPECS</span>
                     <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
@@ -341,8 +341,8 @@ export function ServicesSection() {
                 </div>
               </div>
 
-              {/* Right Column: Visual Showcase Image */}
-              <div className="lg:col-span-5 relative h-20 xs:h-24 sm:h-32 lg:h-full min-h-[80px] sm:min-h-[110px] bg-gray-100 overflow-hidden group">
+              {/* Right Column: Visual Showcase Image (Prominent & Balanced on Mobile) */}
+              <div className="lg:col-span-5 relative h-36 xs:h-40 sm:h-48 lg:h-full shrink-0 bg-gray-100 overflow-hidden group">
                 <Image
                   src={service.image}
                   alt={service.title}

@@ -103,8 +103,8 @@ export function AchievementsSection() {
           </FadeContent>
         </div>
 
-        {/* 2x2 Clean Award Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+        {/* 2x2 Clean Award Cards Grid (2-column on mobile, 2-column on desktop) */}
+        <div className="grid grid-cols-2 gap-3 sm:gap-8">
           {awards.map((award, index) => {
             const IconComponent = award.icon;
 
@@ -117,32 +117,32 @@ export function AchievementsSection() {
                 transition={{ duration: 0.6, delay: index * 0.1, ease: [0.16, 1, 0.3, 1] }}
               >
                 <TiltCard tiltIntensity={4}>
-                  <div className="rounded-2xl p-7 sm:p-9 bg-[#141414] border border-white/5 hover:border-white/20 transition-all duration-300 flex flex-col justify-between min-h-[200px] sm:min-h-[220px] shadow-xl group">
+                  <div className="rounded-xl sm:rounded-2xl p-3.5 sm:p-9 bg-[#141414] border border-white/5 hover:border-white/20 transition-all duration-300 flex flex-col justify-between min-h-[160px] sm:min-h-[220px] shadow-xl group">
                     {/* Top Row: Icon Box + Title */}
-                    <div className="flex items-start gap-5 sm:gap-6">
-                      <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-white/[0.04] border border-white/10 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
-                        <IconComponent className={`w-5 h-5 sm:w-6 sm:h-6 ${award.iconColor}`} />
+                    <div className="flex items-start gap-2.5 sm:gap-6">
+                      <div className="w-8 h-8 sm:w-14 sm:h-14 rounded-lg sm:rounded-xl bg-white/[0.04] border border-white/10 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                        <IconComponent className={`w-4 h-4 sm:w-6 sm:h-6 ${award.iconColor}`} />
                       </div>
-                      <h3 className="text-base sm:text-lg font-bold font-sans text-white uppercase tracking-tight leading-snug">
+                      <h3 className="text-xs sm:text-lg font-bold font-sans text-white uppercase tracking-tight leading-snug line-clamp-2">
                         {award.title}
                       </h3>
                     </div>
 
                     {/* Bottom Row: Achievement + Year */}
-                    <div className="pt-6 border-t border-white/10 flex items-center justify-between text-xs font-mono">
-                      <div>
-                        <span className="text-gray-500 uppercase block text-[10px] tracking-wider">
+                    <div className="pt-3 sm:pt-6 border-t border-white/10 flex items-center justify-between text-[9px] sm:text-xs font-mono">
+                      <div className="min-w-0 pr-1">
+                        <span className="text-gray-500 uppercase block text-[8px] sm:text-[10px] tracking-wider truncate">
                           ACHIEVEMENT
                         </span>
-                        <span className="text-white font-medium">
+                        <span className="text-white font-medium truncate block text-[10px] sm:text-xs">
                           {award.achievement}
                         </span>
                       </div>
-                      <div className="text-right">
-                        <span className="text-gray-500 uppercase block text-[10px] tracking-wider">
+                      <div className="text-right shrink-0">
+                        <span className="text-gray-500 uppercase block text-[8px] sm:text-[10px] tracking-wider">
                           YEAR
                         </span>
-                        <span className="text-[#eb5424] font-bold">
+                        <span className="text-[#eb5424] font-bold text-[10px] sm:text-xs">
                           {award.year}
                         </span>
                       </div>

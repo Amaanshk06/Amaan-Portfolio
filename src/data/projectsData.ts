@@ -377,5 +377,328 @@ export const projectsData: ProjectItem[] = [
       "Dynamic price tier & specification budget filtering",
       "Seamless mobile shopping experience with clean visual structure"
     ]
+  },
+  {
+    id: "gosmarttourism",
+    title: "GoSmart Tourism",
+    url: "https://www.gosmarttourism.com/",
+    category: "Travel / B2B Service-Based",
+    shortCategory: "B2B Services",
+    description:
+      "A comprehensive B2B global tourism and destination management portal providing tailored corporate travel packages, worldwide visa processing, and curated itinerary services.",
+    image: "/projects/gosmarttourism.png",
+    fallbackGradient: "from-blue-950 via-sky-950 to-neutral-950",
+    tags: ["B2B Tourism", "Itinerary Booking", "Visa Concierge", "Responsive UX"],
+    featured: false,
+    displayOrder: 16,
+    highlights: [
+      "Corporate travel & destination management packages",
+      "Automated visa and travel inquiry intake",
+      "Mobile-first responsive discovery interface"
+    ]
+  },
+  {
+    id: "mahatucorp",
+    title: "Mahatu Corp",
+    url: "https://www.mahatubecorp.com/",
+    category: "Ecommerce / Semi E-commerce & Industrial Solutions",
+    shortCategory: "Ecommerce",
+    description:
+      "An industrial supply and semi e-commerce platform offering certified precision tubes, pipes, engineering fittings, and dynamic RFQ quote generation.",
+    image: "/projects/mahatucorp.png",
+    fallbackGradient: "from-slate-950 via-blue-950 to-neutral-950",
+    tags: ["Industrial Supply", "B2B Catalog", "RFQ Inquiries", "Semi E-commerce"],
+    featured: false,
+    displayOrder: 17,
+    highlights: [
+      "Comprehensive industrial tube and pipe specification catalog",
+      "Dynamic RFQ quote generation system",
+      "High-performance technical specifications interface"
+    ]
+  },
+  {
+    id: "replayindia",
+    title: "Replay India",
+    url: "https://replayindia.com/",
+    category: "Ecommerce / B2B E-commerce & Activewear",
+    shortCategory: "B2B Ecommerce",
+    description:
+      "A dedicated B2B e-commerce platform for premium sports performance gear, gym apparel, and high-volume wholesale activewear orders across India.",
+    image: "/projects/replayindia.png",
+    fallbackGradient: "from-red-950 via-zinc-950 to-neutral-950",
+    tags: ["B2B Ecommerce", "Bulk Ordering", "Sports Apparel", "Wholesale Portal"],
+    featured: false,
+    displayOrder: 18,
+    highlights: [
+      "High-volume B2B wholesale order cart and pricing tiers",
+      "Categorized sports apparel and athletic collections",
+      "Rapid checkout and invoice requisition flow"
+    ]
+  },
+  {
+    id: "aerocommattress",
+    title: "AeroComm Mattress",
+    url: "https://aerocommattress.com/",
+    category: "Ecommerce / Home Comfort & Orthopedic Bedding",
+    shortCategory: "Ecommerce",
+    description:
+      "A specialized direct-to-consumer e-commerce brand for ergonomic orthopedic mattresses, high-density memory foam pillows, and restorative sleep solutions.",
+    image: "/projects/aerocommattress.png",
+    fallbackGradient: "from-teal-950 via-slate-900 to-neutral-950",
+    tags: ["D2C Ecommerce", "Mattress Customizer", "Sleep Technology", "Tailwind CSS"],
+    featured: false,
+    displayOrder: 19,
+    highlights: [
+      "Interactive mattress firmness and dimension selector",
+      "Secure multi-payment gateway and EMI calculator integration",
+      "Mobile-optimized product zoom and testimonial galleries"
+    ]
+  },
+  {
+    id: "rankmatics",
+    title: "Rankmatics",
+    url: "https://rankmatics.co/",
+    category: "Commercial / Digital Marketing & SEO Agency",
+    shortCategory: "Tech & Agency",
+    description:
+      "A modern digital marketing, SEO, and growth engineering agency platform showcasing case studies, ROI analytics, data audits, and client discovery funnels.",
+    image: "/projects/rankmatics.png",
+    fallbackGradient: "from-indigo-950 via-purple-950 to-neutral-950",
+    tags: ["SEO Agency", "Growth Engineering", "Audit Dashboards", "Conversion Funnels"],
+    featured: false,
+    displayOrder: 20,
+    highlights: [
+      "Interactive SEO audit request and site scoring engine",
+      "Client success metrics and data-driven case studies",
+      "High-conversion lead capture and consult scheduling"
+    ]
+  },
+  {
+    id: "marriott",
+    title: "Marriott Bonvoy",
+    url: "https://www.marriott.com/default.mi",
+    category: "Travel / Luxury Hospitality & Global Resorts",
+    shortCategory: "Hospitality",
+    description:
+      "A world-class luxury hotel reservation and destination loyalty portal supporting multi-language property discovery, dynamic room rates, and resort booking.",
+    image: "/projects/marriott.png",
+    fallbackGradient: "from-amber-950 via-stone-900 to-neutral-950",
+    tags: ["Luxury Hospitality", "Global Booking Engine", "Resort Discovery", "Next.js"],
+    featured: false,
+    displayOrder: 21,
+    highlights: [
+      "Global resort search and real-time room availability matrix",
+      "High-resolution property showcases and amenity directories",
+      "Flawless responsive navigation engineered for global travelers"
+    ]
+  },
+  {
+    id: "premierinn",
+    title: "Premier Inn",
+    url: "https://www.premierinn.com/gb/en/home.html",
+    category: "Travel / Hospitality & Hotel Booking Network",
+    shortCategory: "Hospitality",
+    description:
+      "A leading hotel network booking portal offering streamlined city searches, family room selections, dynamic pricing, and instant verified check-ins.",
+    image: "/projects/premierinn.png",
+    fallbackGradient: "from-purple-950 via-slate-900 to-neutral-950",
+    tags: ["Hotel Booking", "Location Search", "Dynamic Rates", "Responsive Architecture"],
+    featured: false,
+    displayOrder: 22,
+    highlights: [
+      "Sub-second hotel search with real-time occupancy updates",
+      "Family, business, and weekend getaway booking flows",
+      "Frictionless checkout with instant confirmation receipt"
+    ]
+  },
+  {
+    id: "meliahotels",
+    title: "Meliá Hotels International",
+    url: "https://www.melia.com/en",
+    category: "Travel / Luxury Hospitality & Resorts",
+    shortCategory: "Hospitality",
+    description:
+      "An international luxury hotel and beach resort portal presenting 5-star Mediterranean getaways, wellness sanctuaries, and bespoke travel experiences.",
+    image: "/projects/meliahotels.png",
+    fallbackGradient: "from-yellow-950 via-neutral-900 to-neutral-950",
+    tags: ["Luxury Resorts", "Beachfront Getaways", "Multi-Currency", "Tactile UI"],
+    featured: false,
+    displayOrder: 23,
+    highlights: [
+      "Curated beachfront villa showcases and culinary previews",
+      "Integrated multi-currency booking engine and rewards perks",
+      "Cinematic editorial photography and smooth scroll dynamics"
+    ]
+  },
+  {
+    id: "aadhyabedsheet",
+    title: "Aadhya Bedsheet",
+    url: "https://aadhyabedsheet.com/",
+    category: "Ecommerce / E-commerce & Home Textile",
+    shortCategory: "Ecommerce",
+    description:
+      "An artisanal home textile and bedding storefront featuring 100% pure cotton bedsheets, luxury comforter sets, woven blankets, and seasonal fabric prints.",
+    image: "/projects/aadhyabedsheet.png",
+    fallbackGradient: "from-rose-950 via-neutral-900 to-neutral-950",
+    tags: ["Home Textile", "E-commerce", "Shopify Liquid", "Fabric Zoom"],
+    featured: false,
+    displayOrder: 24,
+    highlights: [
+      "High-resolution fabric weave zoom and thread count specs",
+      "Bundle discount promotions and dynamic slide-out cart drawer",
+      "Rapid mobile shopping experience with instant UPI checkout"
+    ]
+  },
+  {
+    id: "alternativeairlines",
+    title: "Alternative Airlines",
+    url: "https://www.alternativeairlines.com/",
+    category: "Travel / Aviation & Global Flight Booking",
+    shortCategory: "Travel & Flights",
+    description:
+      "A global aviation search and airline ticket marketplace offering flights on 600+ carriers with 40+ international payment options including crypto and BNPL.",
+    image: "/projects/alternativeairlines.png",
+    fallbackGradient: "from-blue-950 via-indigo-950 to-neutral-950",
+    tags: ["Flight Booking", "Aviation Search", "BNPL Gateways", "Global Matrix"],
+    featured: false,
+    displayOrder: 25,
+    highlights: [
+      "Multi-carrier flight comparison with dynamic fare matrices",
+      "Over 40 international payment methods including Splitit and Klarna",
+      "Responsive route map visualization and baggage calculation"
+    ]
+  },
+  {
+    id: "volotea",
+    title: "Volotea Airlines",
+    url: "https://www.volotea.com/en/",
+    category: "Travel / Aviation & Airline Booking",
+    shortCategory: "Travel & Flights",
+    description:
+      "A fast-growing European regional airline portal connecting small and medium European cities with direct non-stop flights and personalized passenger services.",
+    image: "/projects/volotea.png",
+    fallbackGradient: "from-red-950 via-blue-950 to-neutral-950",
+    tags: ["Aviation Portal", "Seat Selection", "Direct Routes", "Mobile Boarding"],
+    featured: false,
+    displayOrder: 26,
+    highlights: [
+      "Direct European regional route finder and low-fare calendar",
+      "Interactive seat map selector and extra baggage add-ons",
+      "Fast digital check-in and mobile boarding pass delivery"
+    ]
+  },
+  {
+    id: "c4dt",
+    title: "Center for Digital Trust (C4DT)",
+    url: "https://c4dt.in/",
+    category: "Commercial / Technology & Digital Security",
+    shortCategory: "Corporate",
+    description:
+      "A premier institutional web portal advancing digital trust, quantum-resistant cryptography, enterprise cybersecurity research, and data privacy frameworks.",
+    image: "/projects/c4dt.png",
+    fallbackGradient: "from-sky-950 via-slate-900 to-neutral-950",
+    tags: ["Digital Trust", "Cybersecurity", "Research Portal", "Enterprise Tech"],
+    featured: false,
+    displayOrder: 27,
+    highlights: [
+      "Academic research whitepaper library and event directories",
+      "Quantum-safe cryptography project showcases and partner labs",
+      "High-contrast accessible typography with sub-second page loads"
+    ]
+  },
+  {
+    id: "truptigroup",
+    title: "Trupti Group",
+    url: "https://revamp.truptigroup.in/",
+    category: "Commercial / Real Estate & Infrastructure Development",
+    shortCategory: "Real Estate",
+    description:
+      "An infrastructure and premium real estate development showcase highlighting landmark residential towers, commercial complexes, and construction milestones.",
+    image: "/projects/truptigroup.png",
+    fallbackGradient: "from-amber-950 via-zinc-900 to-neutral-950",
+    tags: ["Real Estate Development", "Infrastructure", "Tower Showcase", "Floor Plans"],
+    featured: false,
+    displayOrder: 28,
+    highlights: [
+      "Interactive architectural master plans and aerial project tours",
+      "Residential unit floor plan exploration and spec downloads",
+      "Direct sales consultant inquiry and site visit booking engine"
+    ]
+  },
+  {
+    id: "coolcareservices",
+    title: "Cool Care Services",
+    url: "https://coolcareservices.co.in/",
+    category: "Commercial / HVAC & Home Services",
+    shortCategory: "Commercial",
+    description:
+      "A professional residential and commercial HVAC services platform delivering on-demand AC installation, cooling repair, annual maintenance contracts, and emergency diagnostics.",
+    image: "/projects/coolcareservices.png",
+    fallbackGradient: "from-cyan-950 via-sky-950 to-neutral-950",
+    tags: ["HVAC Services", "AC Maintenance", "Service Booking", "Local Business"],
+    featured: false,
+    displayOrder: 29,
+    highlights: [
+      "Quick-dispatch technician booking and service cost calculator",
+      "Commercial HVAC AMC contract packages for offices and clinics",
+      "24/7 emergency response hotline and transparent service pricing"
+    ]
+  },
+  {
+    id: "driftauto",
+    title: "Drift Auto",
+    url: "https://driftauto.co/",
+    category: "Commercial / Automotive Engineering & Services",
+    shortCategory: "Automotive",
+    description:
+      "A high-performance automotive engineering workshop platform offering ECU tuning, dyno diagnostics, bespoke suspension upgrades, and precision track-car preparation.",
+    image: "/projects/driftauto.png",
+    fallbackGradient: "from-orange-950 via-zinc-950 to-neutral-950",
+    tags: ["Automotive Engineering", "ECU Tuning", "Performance Parts", "Dyno Testing"],
+    featured: false,
+    displayOrder: 30,
+    highlights: [
+      "Performance dyno graph telemetry and custom ECU tune catalogs",
+      "Vehicle upgrade package configurator and workshop appointments",
+      "Responsive dark-mode aesthetic with automotive telemetry HUDs"
+    ]
+  },
+  {
+    id: "sbdevelopers",
+    title: "SB Developers",
+    url: "https://sb-developers.com/",
+    category: "Commercial / Real Estate & Commercial Construction",
+    shortCategory: "Real Estate",
+    description:
+      "A leading commercial and residential real estate construction company web presence highlighting modern townships, engineering certifications, and completed turnkey towers.",
+    image: "/projects/sbdevelopers.png",
+    fallbackGradient: "from-yellow-950 via-slate-900 to-neutral-950",
+    tags: ["Commercial Construction", "Township Development", "Turnkey Projects", "Engineering"],
+    featured: false,
+    displayOrder: 31,
+    highlights: [
+      "Turnkey commercial township portfolio with engineering milestones",
+      "Interactive project construction status updates and gallery",
+      "Investor relations, layout blueprints, and schedule consultation"
+    ]
+  },
+  {
+    id: "xprodigy",
+    title: "XProdigy",
+    url: "https://xprodigy.scaleden.com/",
+    category: "Commercial / EdTech & Professional Training",
+    shortCategory: "EdTech",
+    description:
+      "An elite technology cohort training and engineering mentorship platform featuring intensive developer bootcamps, real-world capstone projects, and placement acceleration.",
+    image: "/projects/xprodigy.png",
+    fallbackGradient: "from-indigo-950 via-slate-900 to-neutral-950",
+    tags: ["EdTech Platform", "Developer Bootcamp", "Live Mentorship", "Next.js App"],
+    featured: false,
+    displayOrder: 32,
+    highlights: [
+      "Live cohort curriculum roadmap with weekly milestone tracking",
+      "Interactive code lab previews and alumni placement showcase",
+      "Seamless student enrollment application and tuition options"
+    ]
   }
 ];

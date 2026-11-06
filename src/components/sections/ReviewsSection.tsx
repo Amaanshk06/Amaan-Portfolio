@@ -184,14 +184,14 @@ export function ReviewsSection() {
               disableOnInteraction: false,
               pauseOnMouseEnter: true,
             }}
-            spaceBetween={24}
-            slidesPerView={1}
+            spaceBetween={10}
+            slidesPerView={2}
             slidesPerGroup={1}
             breakpoints={{
               640: {
                 slidesPerView: 2,
                 slidesPerGroup: 1,
-                spaceBetween: 24,
+                spaceBetween: 16,
               },
               1024: {
                 slidesPerView: 3,
@@ -209,49 +209,49 @@ export function ReviewsSection() {
           >
             {reviews.map((review) => (
               <SwiperSlide key={review.id} className="h-auto">
-                <div className="h-full min-h-[340px] rounded-3xl p-7 sm:p-8 bg-[#fcfcfc] border border-gray-200/90 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-xl hover:border-[#eb5424] transition-all duration-300 flex flex-col justify-between group">
+                <div className="h-full min-h-[260px] sm:min-h-[340px] rounded-2xl sm:rounded-3xl p-3.5 sm:p-8 bg-[#fcfcfc] border border-gray-200/90 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-xl hover:border-[#eb5424] transition-all duration-300 flex flex-col justify-between group">
                   <div>
                     {/* Top Row: Stars + Category Pill */}
-                    <div className="flex items-center justify-between gap-2 mb-6">
-                      <div className="flex items-center gap-1 text-[#eb5424]">
+                    <div className="flex items-center justify-between gap-1 mb-3 sm:mb-6">
+                      <div className="flex items-center gap-0.5 sm:gap-1 text-[#eb5424]">
                         {[...Array(5)].map((_, i) => (
-                          <Star key={i} className="w-4 h-4 fill-[#eb5424] text-[#eb5424]" />
+                          <Star key={i} className="w-2.5 h-2.5 sm:w-4 sm:h-4 fill-[#eb5424] text-[#eb5424]" />
                         ))}
                       </div>
 
-                      <span className="px-3 py-1 rounded-full bg-gray-100 border border-gray-200/60 text-[10px] font-mono font-bold uppercase tracking-wider text-gray-600">
+                      <span className="px-1.5 py-0.5 sm:px-3 sm:py-1 rounded-full bg-gray-100 border border-gray-200/60 text-[8px] sm:text-[10px] font-mono font-bold uppercase tracking-wider text-gray-600 truncate max-w-[85px] sm:max-w-none">
                         {review.tag}
                       </span>
                     </div>
 
                     {/* Quote Text */}
-                    <p className="text-xs sm:text-sm text-gray-700 font-sans leading-relaxed mb-6 font-normal">
+                    <p className="text-[11px] sm:text-sm text-gray-700 font-sans leading-relaxed mb-3 sm:mb-6 font-normal line-clamp-4 sm:line-clamp-none">
                       &ldquo;{review.quote}&rdquo;
                     </p>
                   </div>
 
                   {/* Author Row with Decorative Plus Indicator */}
-                  <div className="pt-6 border-t border-gray-100 flex items-center justify-between">
-                    <div className="flex items-center gap-3.5">
+                  <div className="pt-3 sm:pt-6 border-t border-gray-100 flex items-center justify-between">
+                    <div className="flex items-center gap-2 sm:gap-3.5 min-w-0">
                       <div
-                        className={`w-11 h-11 rounded-full ${review.avatarBg} text-white font-mono font-bold text-xs flex items-center justify-center shrink-0 shadow-sm`}
+                        className={`w-7 h-7 sm:w-11 sm:h-11 rounded-full ${review.avatarBg} text-white font-mono font-bold text-[9px] sm:text-xs flex items-center justify-center shrink-0 shadow-sm`}
                       >
                         {review.initials}
                       </div>
-                      <div>
-                        <h3 className="text-sm font-bold font-sans text-gray-950 leading-tight">
+                      <div className="min-w-0">
+                        <h3 className="text-xs sm:text-sm font-bold font-sans text-gray-950 leading-tight truncate">
                           {review.clientName}
                         </h3>
-                        <p className="text-xs text-gray-400 font-sans mt-0.5">
+                        <p className="text-[10px] sm:text-xs text-gray-400 font-sans mt-0.5 truncate">
                           {review.clientRole}
                         </p>
-                        <p className="text-[11px] text-[#eb5424] font-medium font-sans">
+                        <p className="text-[9px] sm:text-[11px] text-[#eb5424] font-medium font-sans truncate">
                           {review.company}
                         </p>
                       </div>
                     </div>
 
-                    <span className="text-gray-300 font-mono text-sm group-hover:text-[#eb5424] transition-colors">
+                    <span className="text-gray-300 font-mono text-xs sm:text-sm group-hover:text-[#eb5424] transition-colors shrink-0 pl-1">
                       +
                     </span>
                   </div>

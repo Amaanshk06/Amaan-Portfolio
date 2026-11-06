@@ -165,31 +165,32 @@ export default function AboutPage() {
       </section>
 
       {/* Core Engineering Principles */}
-      <section className="py-24 bg-[#070707] text-white border-t border-b border-white/10">
-        <div className="max-w-7xl mx-auto px-6 sm:px-12">
-          <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-16">
-            <span className="font-mono text-xs font-bold uppercase tracking-widest text-[#eb5424] block mb-3">
+      <section className="py-16 sm:py-24 bg-[#070707] text-white border-t border-b border-white/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-12">
+          <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-10 sm:mb-16">
+            <span className="font-mono text-xs font-bold uppercase tracking-widest text-[#eb5424] block mb-2 sm:mb-3">
               * ARCHITECTURAL PILLARS
             </span>
             <FadeContent effect="develop" duration={1.2} blur={6} threshold={0.15}>
-              <h2 className="text-3xl sm:text-5xl md:text-6xl font-black uppercase tracking-tight text-white font-sans leading-tight">
+              <h2 className="text-2xl sm:text-5xl md:text-6xl font-black uppercase tracking-tight text-white font-sans leading-tight">
                 STANDARDS I <span className="text-gray-400">NEVER COMPROMISE ON.</span>
               </h2>
             </FadeContent>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {/* 2 Cards in One Row on Mobile, 4 Columns on Desktop */}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-6">
             {values.map((val) => (
               <TiltCard key={val.num} tiltIntensity={5} className="h-full">
-                <div className="p-8 rounded-3xl bg-white/[0.03] border border-white/10 hover:border-[#eb5424] transition-all h-full flex flex-col justify-between group">
+                <div className="p-3.5 sm:p-8 rounded-xl sm:rounded-3xl bg-white/[0.03] border border-white/10 hover:border-[#eb5424] transition-all h-full flex flex-col justify-between group">
                   <div>
-                    <span className="font-mono text-xs font-black text-[#eb5424] px-2.5 py-1 rounded bg-[#eb5424]/10 mb-6 inline-block">
+                    <span className="font-mono text-[10px] sm:text-xs font-black text-[#eb5424] px-2 py-0.5 sm:px-2.5 sm:py-1 rounded bg-[#eb5424]/10 mb-2 sm:mb-6 inline-block">
                       {val.num}
                     </span>
-                    <h3 className="font-sans font-black text-lg uppercase text-white mb-3 group-hover:text-[#eb5424] transition-colors">
+                    <h3 className="font-sans font-black text-xs sm:text-lg uppercase text-white mb-1.5 sm:mb-3 group-hover:text-[#eb5424] transition-colors leading-snug min-h-[32px] sm:min-h-0">
                       {val.title}
                     </h3>
-                    <p className="text-xs sm:text-sm text-gray-400 font-sans leading-relaxed">
+                    <p className="text-[11px] sm:text-sm text-gray-400 font-sans leading-relaxed">
                       {val.desc}
                     </p>
                   </div>
@@ -218,222 +219,242 @@ export default function AboutPage() {
           </p>
         </div>
 
-        {/* 4 Milestones Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 items-stretch">
+        {/* 4 Milestones Cards Grid (2-column on mobile, 2-column on desktop) */}
+        <div className="grid grid-cols-2 gap-2.5 sm:gap-8 items-stretch">
           {/* Milestone 01 */}
           <TiltCard tiltIntensity={4} className="h-full">
-            <div className="p-8 sm:p-9 rounded-3xl bg-[#fcfcfc] text-[#0a0a0a] border border-gray-200 hover:border-[#eb5424] hover:shadow-2xl transition-all duration-300 h-full flex flex-col justify-between group relative overflow-hidden">
-              <div>
-                <div className="flex items-center justify-between pb-4 mb-5 border-b border-gray-200">
-                  <div className="flex items-center gap-2">
-                    <span className="font-mono text-xs font-black text-[#eb5424] px-2.5 py-1 rounded bg-[#eb5424]/10">
+            <div className="p-3 sm:p-9 rounded-2xl sm:rounded-3xl bg-[#fcfcfc] text-[#0a0a0a] border border-gray-200 hover:border-[#eb5424] hover:shadow-2xl transition-all duration-300 h-full flex flex-col justify-between group relative overflow-hidden">
+              <div className="flex flex-col flex-1">
+                {/* Header */}
+                <div className="flex items-center justify-between pb-2 sm:pb-4 mb-2 sm:mb-5 border-b border-gray-200">
+                  <div className="flex items-center gap-1.5 sm:gap-2">
+                    <span className="font-mono text-[10px] sm:text-xs font-black text-[#eb5424] px-1.5 py-0.5 sm:px-2.5 sm:py-1 rounded bg-[#eb5424]/10">
                       PHASE 01
                     </span>
-                    <span className="font-mono text-xs font-bold text-gray-500">2024 // Q1–Q2</span>
+                    <span className="font-mono text-[9px] sm:text-xs font-bold text-gray-500">2024 // Q1–Q2</span>
                   </div>
-                  <span className="px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[10px] font-mono font-bold flex items-center gap-1.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-                    FOUNDATIONAL
-                  </span>
                 </div>
 
-                <h3 className="text-xl sm:text-2xl font-black uppercase font-sans tracking-tight text-[#0a0a0a] mb-2 group-hover:text-[#eb5424] transition-colors">
+                {/* Title */}
+                <h3 className="text-[11px] sm:text-2xl font-black uppercase font-sans tracking-tight text-[#0a0a0a] mb-1.5 sm:mb-2 group-hover:text-[#eb5424] transition-colors leading-tight min-h-[34px] sm:min-h-0 flex items-center">
                   VANILLA DOM ENGINES &amp; WEB STANDARDS
                 </h3>
-                <p className="text-xs sm:text-[13px] text-gray-600 font-sans leading-relaxed mb-5">
-                  Deconstructing browser rendering lifecycles, mastering native DOM APIs, semantic markup, and responsive CSS architecture without external abstraction layers.
+
+                {/* Description */}
+                <p className="text-[10px] sm:text-[13px] text-gray-600 font-sans leading-relaxed mb-2 sm:mb-5 min-h-[44px] sm:min-h-0">
+                  Deconstructing browser DOM lifecycles, native APIs, semantic markup, and zero-framework responsive CSS.
                 </p>
 
                 {/* Deliverable highlight */}
-                <div className="p-4 rounded-2xl bg-gray-50 border border-gray-200 mb-5">
-                  <span className="font-mono text-[10px] font-bold text-gray-500 uppercase tracking-wider block mb-1">
-                    KEY PRODUCTION OUTCOME:
+                <div className="p-2 sm:p-4 rounded-xl sm:rounded-2xl bg-gray-50 border border-gray-200 mb-2 sm:mb-5 min-h-[58px] sm:min-h-0 flex flex-col justify-center">
+                  <span className="font-mono text-[8px] sm:text-[10px] font-bold text-gray-500 uppercase tracking-wider block mb-0.5 sm:mb-1">
+                    KEY OUTCOME:
                   </span>
-                  <p className="text-xs text-gray-900 font-sans font-medium leading-relaxed">
-                    Built 5 bespoke, zero-dependency responsive portals with sub-second execution and cross-browser consistency.
+                  <p className="text-[9px] sm:text-xs text-gray-900 font-sans font-medium leading-snug">
+                    Built 5 bespoke, zero-dependency responsive portals with sub-second execution.
                   </p>
                 </div>
 
                 {/* Tech Badges */}
-                <div className="flex flex-wrap gap-1.5 mb-2">
-                  {["Vanilla JS (ES6+)", "CSS Architecture", "DOM Event Systems", "Browser Paint Pipeline"].map((skill) => (
-                    <span
-                      key={skill}
-                      className="px-2.5 py-0.5 rounded-lg bg-white border border-gray-200 text-[10px] sm:text-[11px] font-mono text-gray-700 shadow-2xs"
-                    >
-                      {skill}
-                    </span>
-                  ))}
+                <div className="flex flex-wrap gap-1 mb-2">
+                  <span className="px-1.5 py-0.5 rounded-md sm:rounded-lg bg-white border border-gray-200 text-[9px] sm:text-[11px] font-mono text-gray-700 shadow-2xs">
+                    Vanilla JS
+                  </span>
+                  <span className="px-1.5 py-0.5 rounded-md sm:rounded-lg bg-white border border-gray-200 text-[9px] sm:text-[11px] font-mono text-gray-700 shadow-2xs">
+                    CSS Engine
+                  </span>
+                  <span className="hidden sm:inline-block px-1.5 py-0.5 rounded-md sm:rounded-lg bg-white border border-gray-200 text-[9px] sm:text-[11px] font-mono text-gray-700 shadow-2xs">
+                    DOM Event Systems
+                  </span>
+                  <span className="hidden sm:inline-block px-1.5 py-0.5 rounded-md sm:rounded-lg bg-white border border-gray-200 text-[9px] sm:text-[11px] font-mono text-gray-700 shadow-2xs">
+                    Paint Pipeline
+                  </span>
                 </div>
               </div>
 
-              <div className="pt-5 mt-5 border-t border-gray-200 flex items-center justify-between font-mono text-[11px]">
-                <span className="text-gray-400">IMPACT METRIC</span>
-                <span className="text-gray-900 font-bold">100% CORE WEB VITALS</span>
+              {/* Impact Footer */}
+              <div className="pt-2 sm:pt-5 mt-auto border-t border-gray-200 flex items-center justify-between font-mono text-[9px] sm:text-[11px]">
+                <span className="text-gray-400">IMPACT</span>
+                <span className="text-gray-900 font-bold truncate">100% WEB VITALS</span>
               </div>
             </div>
           </TiltCard>
 
           {/* Milestone 02 */}
           <TiltCard tiltIntensity={4} className="h-full">
-            <div className="p-8 sm:p-9 rounded-3xl bg-[#fcfcfc] text-[#0a0a0a] border border-gray-200 hover:border-[#eb5424] hover:shadow-2xl transition-all duration-300 h-full flex flex-col justify-between group relative overflow-hidden">
-              <div>
-                <div className="flex items-center justify-between pb-4 mb-5 border-b border-gray-200">
-                  <div className="flex items-center gap-2">
-                    <span className="font-mono text-xs font-black text-[#eb5424] px-2.5 py-1 rounded bg-[#eb5424]/10">
+            <div className="p-3 sm:p-9 rounded-2xl sm:rounded-3xl bg-[#fcfcfc] text-[#0a0a0a] border border-gray-200 hover:border-[#eb5424] hover:shadow-2xl transition-all duration-300 h-full flex flex-col justify-between group relative overflow-hidden">
+              <div className="flex flex-col flex-1">
+                {/* Header */}
+                <div className="flex items-center justify-between pb-2 sm:pb-4 mb-2 sm:mb-5 border-b border-gray-200">
+                  <div className="flex items-center gap-1.5 sm:gap-2">
+                    <span className="font-mono text-[10px] sm:text-xs font-black text-[#eb5424] px-1.5 py-0.5 sm:px-2.5 sm:py-1 rounded bg-[#eb5424]/10">
                       PHASE 02
                     </span>
-                    <span className="font-mono text-xs font-bold text-gray-500">2024 // Q3–Q4</span>
+                    <span className="font-mono text-[9px] sm:text-xs font-bold text-gray-500">2024 // Q3–Q4</span>
                   </div>
-                  <span className="px-2.5 py-1 rounded-full bg-orange-50 text-[#eb5424] border border-[#eb5424]/30 text-[10px] font-mono font-bold flex items-center gap-1.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#eb5424]" />
-                    COMMERCE LIVE
-                  </span>
                 </div>
 
-                <h3 className="text-xl sm:text-2xl font-black uppercase font-sans tracking-tight text-[#0a0a0a] mb-2 group-hover:text-[#eb5424] transition-colors">
+                {/* Title */}
+                <h3 className="text-[11px] sm:text-2xl font-black uppercase font-sans tracking-tight text-[#0a0a0a] mb-1.5 sm:mb-2 group-hover:text-[#eb5424] transition-colors leading-tight min-h-[34px] sm:min-h-0 flex items-center">
                   REACT &amp; BESPOKE E-COMMERCE STOREFRONTS
                 </h3>
-                <p className="text-xs sm:text-[13px] text-gray-600 font-sans leading-relaxed mb-5">
-                  Transitioned into component-driven development and custom Shopify Liquid 2.0 themes. Engineered interactive product customizers and dynamic AJAX cart drawers.
+
+                {/* Description */}
+                <p className="text-[10px] sm:text-[13px] text-gray-600 font-sans leading-relaxed mb-2 sm:mb-5 min-h-[44px] sm:min-h-0">
+                  Component-driven React architectures, custom Shopify Liquid 2.0 storefronts, and dynamic AJAX carts.
                 </p>
 
                 {/* Deliverable highlight */}
-                <div className="p-4 rounded-2xl bg-gray-50 border border-gray-200 mb-5">
-                  <span className="font-mono text-[10px] font-bold text-gray-500 uppercase tracking-wider block mb-1">
-                    KEY PRODUCTION OUTCOME:
+                <div className="p-2 sm:p-4 rounded-xl sm:rounded-2xl bg-gray-50 border border-gray-200 mb-2 sm:mb-5 min-h-[58px] sm:min-h-0 flex flex-col justify-center">
+                  <span className="font-mono text-[8px] sm:text-[10px] font-bold text-gray-500 uppercase tracking-wider block mb-0.5 sm:mb-1">
+                    KEY OUTCOME:
                   </span>
-                  <p className="text-xs text-gray-900 font-sans font-medium leading-relaxed">
-                    Shipped custom storefronts for Fruitilicious Gifting &amp; Auras Fragrances, driving an immediate 34% increase in average order value.
+                  <p className="text-[9px] sm:text-xs text-gray-900 font-sans font-medium leading-snug">
+                    Shipped custom storefronts for Fruitilicious &amp; Auras with +34% AOV lift.
                   </p>
                 </div>
 
                 {/* Tech Badges */}
-                <div className="flex flex-wrap gap-1.5 mb-2">
-                  {["React.js", "Shopify Liquid 2.0", "AJAX Cart API", "Tailwind CSS", "REST Endpoints"].map((skill) => (
-                    <span
-                      key={skill}
-                      className="px-2.5 py-0.5 rounded-lg bg-white border border-gray-200 text-[10px] sm:text-[11px] font-mono text-gray-700 shadow-2xs"
-                    >
-                      {skill}
-                    </span>
-                  ))}
+                <div className="flex flex-wrap gap-1 mb-2">
+                  <span className="px-1.5 py-0.5 rounded-md sm:rounded-lg bg-white border border-gray-200 text-[9px] sm:text-[11px] font-mono text-gray-700 shadow-2xs">
+                    React.js
+                  </span>
+                  <span className="px-1.5 py-0.5 rounded-md sm:rounded-lg bg-white border border-gray-200 text-[9px] sm:text-[11px] font-mono text-gray-700 shadow-2xs">
+                    Shopify 2.0
+                  </span>
+                  <span className="hidden sm:inline-block px-1.5 py-0.5 rounded-md sm:rounded-lg bg-white border border-gray-200 text-[9px] sm:text-[11px] font-mono text-gray-700 shadow-2xs">
+                    AJAX Cart API
+                  </span>
+                  <span className="hidden sm:inline-block px-1.5 py-0.5 rounded-md sm:rounded-lg bg-white border border-gray-200 text-[9px] sm:text-[11px] font-mono text-gray-700 shadow-2xs">
+                    Tailwind CSS
+                  </span>
                 </div>
               </div>
 
-              <div className="pt-5 mt-5 border-t border-gray-200 flex items-center justify-between font-mono text-[11px]">
-                <span className="text-gray-400">IMPACT METRIC</span>
-                <span className="text-[#eb5424] font-bold">+34% AOV CONVERSION</span>
+              {/* Impact Footer */}
+              <div className="pt-2 sm:pt-5 mt-auto border-t border-gray-200 flex items-center justify-between font-mono text-[9px] sm:text-[11px]">
+                <span className="text-gray-400">IMPACT</span>
+                <span className="text-[#eb5424] font-bold truncate">+34% CONVERSION</span>
               </div>
             </div>
           </TiltCard>
 
           {/* Milestone 03 */}
           <TiltCard tiltIntensity={4} className="h-full">
-            <div className="p-8 sm:p-9 rounded-3xl bg-[#fcfcfc] text-[#0a0a0a] border border-gray-200 hover:border-[#eb5424] hover:shadow-2xl transition-all duration-300 h-full flex flex-col justify-between group relative overflow-hidden">
-              <div>
-                <div className="flex items-center justify-between pb-4 mb-5 border-b border-gray-200">
-                  <div className="flex items-center gap-2">
-                    <span className="font-mono text-xs font-black text-[#eb5424] px-2.5 py-1 rounded bg-[#eb5424]/10">
+            <div className="p-3 sm:p-9 rounded-2xl sm:rounded-3xl bg-[#fcfcfc] text-[#0a0a0a] border border-gray-200 hover:border-[#eb5424] hover:shadow-2xl transition-all duration-300 h-full flex flex-col justify-between group relative overflow-hidden">
+              <div className="flex flex-col flex-1">
+                {/* Header */}
+                <div className="flex items-center justify-between pb-2 sm:pb-4 mb-2 sm:mb-5 border-b border-gray-200">
+                  <div className="flex items-center gap-1.5 sm:gap-2">
+                    <span className="font-mono text-[10px] sm:text-xs font-black text-[#eb5424] px-1.5 py-0.5 sm:px-2.5 sm:py-1 rounded bg-[#eb5424]/10">
                       PHASE 03
                     </span>
-                    <span className="font-mono text-xs font-bold text-gray-500">2025 // FULL-YEAR</span>
+                    <span className="font-mono text-[9px] sm:text-xs font-bold text-gray-500">2025 // FULL</span>
                   </div>
-                  <span className="px-2.5 py-1 rounded-full bg-blue-50 text-blue-700 border border-blue-200 text-[10px] font-mono font-bold flex items-center gap-1.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-blue-500" />
-                    ENTERPRISE PROD
-                  </span>
                 </div>
 
-                <h3 className="text-xl sm:text-2xl font-black uppercase font-sans tracking-tight text-[#0a0a0a] mb-2 group-hover:text-[#eb5424] transition-colors">
+                {/* Title */}
+                <h3 className="text-[11px] sm:text-2xl font-black uppercase font-sans tracking-tight text-[#0a0a0a] mb-1.5 sm:mb-2 group-hover:text-[#eb5424] transition-colors leading-tight min-h-[34px] sm:min-h-0 flex items-center">
                   NEXT.JS 15 &amp; STRICT TYPESCRIPT SYSTEMS
                 </h3>
-                <p className="text-xs sm:text-[13px] text-gray-600 font-sans leading-relaxed mb-5">
-                  Architecting full-stack web applications with Next.js App Router, React 19 server components, automated JSON-LD schemas, and enterprise TypeScript validation.
+
+                {/* Description */}
+                <p className="text-[10px] sm:text-[13px] text-gray-600 font-sans leading-relaxed mb-2 sm:mb-5 min-h-[44px] sm:min-h-0">
+                  Full-stack Next.js 15 App Router, React 19 server components, and enterprise TypeScript validation.
                 </p>
 
                 {/* Deliverable highlight */}
-                <div className="p-4 rounded-2xl bg-gray-50 border border-gray-200 mb-5">
-                  <span className="font-mono text-[10px] font-bold text-gray-500 uppercase tracking-wider block mb-1">
-                    KEY PRODUCTION OUTCOME:
+                <div className="p-2 sm:p-4 rounded-xl sm:rounded-2xl bg-gray-50 border border-gray-200 mb-2 sm:mb-5 min-h-[58px] sm:min-h-0 flex flex-col justify-center">
+                  <span className="font-mono text-[8px] sm:text-[10px] font-bold text-gray-500 uppercase tracking-wider block mb-0.5 sm:mb-1">
+                    KEY OUTCOME:
                   </span>
-                  <p className="text-xs text-gray-900 font-sans font-medium leading-relaxed">
-                    Engineered Frisson Multispeciality Hospital portal and Travel Villas of Goa rental marketplace for thousands of active visits.
+                  <p className="text-[9px] sm:text-xs text-gray-900 font-sans font-medium leading-snug">
+                    Engineered Frisson Hospital &amp; Travel Villas with 24/7 zero-lag uptime.
                   </p>
                 </div>
 
                 {/* Tech Badges */}
-                <div className="flex flex-wrap gap-1.5 mb-2">
-                  {["Next.js 15", "React 19", "TypeScript", "Server Actions", "Zod Validation", "SEO Automation"].map((skill) => (
-                    <span
-                      key={skill}
-                      className="px-2.5 py-0.5 rounded-lg bg-white border border-gray-200 text-[10px] sm:text-[11px] font-mono text-gray-700 shadow-2xs"
-                    >
-                      {skill}
-                    </span>
-                  ))}
+                <div className="flex flex-wrap gap-1 mb-2">
+                  <span className="px-1.5 py-0.5 rounded-md sm:rounded-lg bg-white border border-gray-200 text-[9px] sm:text-[11px] font-mono text-gray-700 shadow-2xs">
+                    Next.js 15
+                  </span>
+                  <span className="px-1.5 py-0.5 rounded-md sm:rounded-lg bg-white border border-gray-200 text-[9px] sm:text-[11px] font-mono text-gray-700 shadow-2xs">
+                    TypeScript
+                  </span>
+                  <span className="hidden sm:inline-block px-1.5 py-0.5 rounded-md sm:rounded-lg bg-white border border-gray-200 text-[9px] sm:text-[11px] font-mono text-gray-700 shadow-2xs">
+                    React 19
+                  </span>
+                  <span className="hidden sm:inline-block px-1.5 py-0.5 rounded-md sm:rounded-lg bg-white border border-gray-200 text-[9px] sm:text-[11px] font-mono text-gray-700 shadow-2xs">
+                    Zod Validation
+                  </span>
                 </div>
               </div>
 
-              <div className="pt-5 mt-5 border-t border-gray-200 flex items-center justify-between font-mono text-[11px]">
-                <span className="text-gray-400">IMPACT METRIC</span>
-                <span className="text-blue-600 font-bold">24/7 ZERO LAG UPTIME</span>
+              {/* Impact Footer */}
+              <div className="pt-2 sm:pt-5 mt-auto border-t border-gray-200 flex items-center justify-between font-mono text-[9px] sm:text-[11px]">
+                <span className="text-gray-400">IMPACT</span>
+                <span className="text-blue-600 font-bold truncate">ZERO LAG UPTIME</span>
               </div>
             </div>
           </TiltCard>
 
           {/* Milestone 04 */}
           <TiltCard tiltIntensity={4} className="h-full">
-            <div className="p-8 sm:p-9 rounded-3xl bg-[#0a0a0a] text-white border border-white/10 hover:border-[#eb5424] hover:shadow-2xl transition-all duration-300 h-full flex flex-col justify-between group relative overflow-hidden">
+            <div className="p-3 sm:p-9 rounded-2xl sm:rounded-3xl bg-[#fcfcfc] sm:bg-[#0a0a0a] text-[#0a0a0a] sm:text-white border border-gray-200 sm:border-white/10 hover:border-[#eb5424] hover:shadow-2xl transition-all duration-300 h-full flex flex-col justify-between group relative overflow-hidden">
               <div className="absolute top-0 right-0 w-36 h-36 bg-[#eb5424]/15 rounded-full blur-3xl pointer-events-none" />
 
-              <div>
-                <div className="flex items-center justify-between pb-4 mb-5 border-b border-white/10">
-                  <div className="flex items-center gap-2">
-                    <span className="font-mono text-xs font-black text-[#eb5424] px-2.5 py-1 rounded bg-[#eb5424]/20 border border-[#eb5424]/30">
+              <div className="flex flex-col flex-1">
+                {/* Header */}
+                <div className="flex items-center justify-between pb-2 sm:pb-4 mb-2 sm:mb-5 border-b border-gray-200 sm:border-white/10">
+                  <div className="flex items-center gap-1.5 sm:gap-2">
+                    <span className="font-mono text-[10px] sm:text-xs font-black text-[#eb5424] px-1.5 py-0.5 sm:px-2.5 sm:py-1 rounded bg-[#eb5424]/15 sm:bg-[#eb5424]/20 border border-[#eb5424]/30">
                       PHASE 04
                     </span>
-                    <span className="font-mono text-xs font-bold text-gray-400">2026 // CURRENT</span>
+                    <span className="font-mono text-[9px] sm:text-xs font-bold text-gray-500 sm:text-gray-400">2026 // CURRENT</span>
                   </div>
-                  <span className="px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-[10px] font-mono font-bold flex items-center gap-1.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                    ACTIVE R&amp;D
-                  </span>
                 </div>
 
-                <h3 className="text-xl sm:text-2xl font-black uppercase font-sans tracking-tight text-white mb-2 group-hover:text-[#eb5424] transition-colors">
+                {/* Title */}
+                <h3 className="text-[11px] sm:text-2xl font-black uppercase font-sans tracking-tight text-[#0a0a0a] sm:text-white mb-1.5 sm:mb-2 group-hover:text-[#eb5424] transition-colors leading-tight min-h-[34px] sm:min-h-0 flex items-center">
                   HARDWARE-ACCELERATED WEBGL &amp; 3D
                 </h3>
-                <p className="text-xs sm:text-[13px] text-gray-300 font-sans leading-relaxed mb-5">
-                  Integrating Three.js WebGL scenes, custom GLSL shaders, and Framer Motion spring physics to craft award-winning, tactile, and cinematic digital products.
+
+                {/* Description */}
+                <p className="text-[10px] sm:text-[13px] text-gray-600 sm:text-gray-300 font-sans leading-relaxed mb-2 sm:mb-5 min-h-[44px] sm:min-h-0">
+                  Three.js WebGL scenes, custom GLSL shaders, and 60 FPS Framer Motion spring physics.
                 </p>
 
                 {/* Deliverable highlight */}
-                <div className="p-4 rounded-2xl bg-white/[0.04] border border-white/10 mb-5">
-                  <span className="font-mono text-[10px] font-bold text-[#eb5424] uppercase tracking-wider block mb-1">
-                    KEY PRODUCTION OUTCOME:
+                <div className="p-2 sm:p-4 rounded-xl sm:rounded-2xl bg-gray-50 sm:bg-white/[0.04] border border-gray-200 sm:border-white/10 mb-2 sm:mb-5 min-h-[58px] sm:min-h-0 flex flex-col justify-center">
+                  <span className="font-mono text-[8px] sm:text-[10px] font-bold text-gray-500 sm:text-gray-400 uppercase tracking-wider block mb-0.5 sm:mb-1">
+                    KEY OUTCOME:
                   </span>
-                  <p className="text-xs text-gray-200 font-sans font-medium leading-relaxed">
-                    Crafting fluid, interactive web architectures with sub-250ms TTFB, 60 FPS motion graphics, and 98+ Google Lighthouse scores.
+                  <p className="text-[9px] sm:text-xs text-gray-900 sm:text-gray-200 font-sans font-medium leading-snug">
+                    Delivered physics-driven interactive portfolio running locked at 60 FPS.
                   </p>
                 </div>
 
                 {/* Tech Badges */}
-                <div className="flex flex-wrap gap-1.5 mb-2">
-                  {["Three.js WebGL", "GLSL Shaders", "Framer Motion", "GSAP ScrollTrigger", "Physics Springs"].map((skill) => (
-                    <span
-                      key={skill}
-                      className="px-2.5 py-0.5 rounded-lg bg-white/10 border border-white/15 text-[10px] sm:text-[11px] font-mono text-gray-200"
-                    >
-                      {skill}
-                    </span>
-                  ))}
+                <div className="flex flex-wrap gap-1 mb-2">
+                  <span className="px-1.5 py-0.5 rounded-md sm:rounded-lg bg-white sm:bg-white/10 border border-gray-200 sm:border-white/15 text-[9px] sm:text-[11px] font-mono text-gray-700 sm:text-gray-200 shadow-2xs">
+                    Three.js
+                  </span>
+                  <span className="px-1.5 py-0.5 rounded-md sm:rounded-lg bg-white sm:bg-white/10 border border-gray-200 sm:border-white/15 text-[9px] sm:text-[11px] font-mono text-gray-700 sm:text-gray-200 shadow-2xs">
+                    GLSL Shaders
+                  </span>
+                  <span className="hidden sm:inline-block px-1.5 py-0.5 rounded-md sm:rounded-lg bg-white/10 border border-white/15 text-[9px] sm:text-[11px] font-mono text-gray-200">
+                    Framer Motion
+                  </span>
+                  <span className="hidden sm:inline-block px-1.5 py-0.5 rounded-md sm:rounded-lg bg-white/10 border border-white/15 text-[9px] sm:text-[11px] font-mono text-gray-200">
+                    ScrollTrigger
+                  </span>
                 </div>
               </div>
 
-              <div className="pt-5 mt-5 border-t border-white/10 flex items-center justify-between font-mono text-[11px]">
-                <span className="text-gray-400">IMPACT METRIC</span>
-                <span className="text-emerald-400 font-bold">60 FPS TACTILE MOTION</span>
+              {/* Impact Footer */}
+              <div className="pt-2 sm:pt-5 mt-auto border-t border-gray-200 sm:border-white/10 flex items-center justify-between font-mono text-[9px] sm:text-[11px]">
+                <span className="text-gray-400">IMPACT</span>
+                <span className="text-emerald-500 font-bold truncate">60 FPS RENDER</span>
               </div>
             </div>
           </TiltCard>

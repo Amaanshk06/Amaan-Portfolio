@@ -27,7 +27,10 @@ export default function WorkPage() {
     if (activeCategory === "hospitality")
       return (
         p.category.toLowerCase().includes("travel") ||
-        p.category.toLowerCase().includes("hospitality")
+        p.category.toLowerCase().includes("hospitality") ||
+        p.category.toLowerCase().includes("aviation") ||
+        p.category.toLowerCase().includes("hotel") ||
+        p.category.toLowerCase().includes("resort")
       );
     if (activeCategory === "ecommerce")
       return (
@@ -36,7 +39,11 @@ export default function WorkPage() {
         p.category.toLowerCase().includes("food") ||
         p.category.toLowerCase().includes("electronics") ||
         p.category.toLowerCase().includes("hardware") ||
-        p.category.toLowerCase().includes("refurbished")
+        p.category.toLowerCase().includes("refurbished") ||
+        p.category.toLowerCase().includes("bedding") ||
+        p.category.toLowerCase().includes("textile") ||
+        p.category.toLowerCase().includes("activewear") ||
+        p.category.toLowerCase().includes("comfort")
       );
     if (activeCategory === "healthcare")
       return (
@@ -53,7 +60,14 @@ export default function WorkPage() {
         p.category.toLowerCase().includes("commercial") ||
         p.category.toLowerCase().includes("real estate") ||
         p.category.toLowerCase().includes("construction") ||
-        p.category.toLowerCase().includes("architecture")
+        p.category.toLowerCase().includes("architecture") ||
+        p.category.toLowerCase().includes("b2b") ||
+        p.category.toLowerCase().includes("agency") ||
+        p.category.toLowerCase().includes("security") ||
+        p.category.toLowerCase().includes("automotive") ||
+        p.category.toLowerCase().includes("hvac") ||
+        p.category.toLowerCase().includes("edtech") ||
+        p.category.toLowerCase().includes("corporate")
       );
     return true;
   });
@@ -132,8 +146,8 @@ export default function WorkPage() {
           </div>
         </div>
 
-        {/* 3-Column Grid Showing All Filtered Projects */}
-        <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7 lg:gap-8">
+        {/* 2-Column Grid on Mobile, 3-Column Grid on Desktop */}
+        <motion.div layout className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-7 lg:gap-8">
           <AnimatePresence mode="popLayout">
             {filteredProjects.map((project, idx) => {
               const xOffset = idx % 2 === 0 ? -28 : 28;
@@ -147,7 +161,7 @@ export default function WorkPage() {
                   viewport={{ once: false, amount: 0.15 }}
                   exit={{ opacity: 0, scale: 0.95 }}
                   transition={{ duration: 0.6, delay: (idx % 3) * 0.09, ease: [0.16, 1, 0.3, 1] }}
-                  className="group flex flex-col justify-between rounded-2xl sm:rounded-3xl bg-[#fcfcfc] border border-gray-200/80 hover:border-[#eb5424] p-5 sm:p-6 shadow-sm hover:shadow-2xl transition-all duration-400 h-full"
+                  className="group flex flex-col justify-between rounded-xl sm:rounded-3xl bg-[#fcfcfc] border border-gray-200/80 hover:border-[#eb5424] p-3 sm:p-6 shadow-sm hover:shadow-2xl transition-all duration-400 h-full"
                 >
                   <div>
                     {/* Clean Aligned Image Container with Clip-Path Reveal */}
@@ -155,34 +169,34 @@ export default function WorkPage() {
                       href={project.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="block relative w-full mb-4"
+                      className="block relative w-full mb-2.5 sm:mb-4"
                       aria-label={`Open live site for ${project.title}`}
                     >
                       <motion.div
-                        initial={{ clipPath: "inset(6% 0% 6% 0% round 1rem)" }}
-                        whileInView={{ clipPath: "inset(0% 0% 0% 0% round 1rem)" }}
+                        initial={{ clipPath: "inset(6% 0% 6% 0% round 0.75rem)" }}
+                        whileInView={{ clipPath: "inset(0% 0% 0% 0% round 0.75rem)" }}
                         viewport={{ once: false, amount: 0.2 }}
                         transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-                        className="relative w-full aspect-[16/10] rounded-xl sm:rounded-2xl overflow-hidden bg-gray-100 shadow-inner"
+                        className="relative w-full aspect-[16/10] rounded-lg sm:rounded-2xl overflow-hidden bg-gray-100 shadow-inner"
                       >
                         <Image
                           src={project.image}
                           alt={project.title}
                           fill
                           className="object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105"
-                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                          sizes="(max-width: 768px) 50vw, 33vw"
                         />
 
                         {/* Gradient Overlay */}
                         <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-40 group-hover:opacity-60 transition-opacity duration-300" />
 
                         {/* Top Right External Arrow */}
-                        <div className="absolute top-3.5 right-3.5 w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-white/90 backdrop-blur-md text-black flex items-center justify-center shadow-md group-hover:bg-[#eb5424] group-hover:text-white transition-all duration-300">
-                          <ArrowUpRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                        <div className="absolute top-2 right-2 sm:top-3.5 sm:right-3.5 w-6 h-6 sm:w-9 sm:h-9 rounded-full bg-white/90 backdrop-blur-md text-black flex items-center justify-center shadow-md group-hover:bg-[#eb5424] group-hover:text-white transition-all duration-300">
+                          <ArrowUpRight className="w-3 h-3 sm:w-3.5 sm:h-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                         </div>
 
                         {/* Category Overlay Pill */}
-                        <div className="absolute bottom-3 left-3 px-2.5 py-0.5 rounded-full bg-black/60 backdrop-blur-md text-white font-mono text-[10px] font-bold uppercase tracking-wider">
+                        <div className="absolute bottom-2 left-2 sm:bottom-3 sm:left-3 px-2 py-0.5 rounded-full bg-black/60 backdrop-blur-md text-white font-mono text-[8px] sm:text-[10px] font-bold uppercase tracking-wider">
                           {project.shortCategory || project.category}
                         </div>
                       </motion.div>
@@ -204,21 +218,21 @@ export default function WorkPage() {
                         rel="noopener noreferrer"
                         className="block"
                       >
-                        <h3 className="text-base sm:text-lg lg:text-xl font-black uppercase font-sans tracking-tight text-gray-950 group-hover:text-[#eb5424] transition-colors leading-tight mb-2">
+                        <h3 className="text-xs sm:text-lg lg:text-xl font-black uppercase font-sans tracking-tight text-gray-950 group-hover:text-[#eb5424] transition-colors leading-tight mb-1 sm:mb-2 line-clamp-1 sm:line-clamp-none">
                           {project.title}
                         </h3>
                       </a>
 
-                      <p className="text-xs sm:text-[13px] text-gray-600 font-sans leading-relaxed line-clamp-2 mb-3.5">
+                      <p className="text-[11px] sm:text-[13px] text-gray-600 font-sans leading-relaxed line-clamp-2 mb-2 sm:mb-3.5 hidden xs:block">
                         {project.description}
                       </p>
 
                       {/* Tags Row */}
-                      <div className="flex flex-wrap gap-1.5 mb-5">
-                        {project.tags.slice(0, 3).map((tag) => (
+                      <div className="flex flex-wrap gap-1 mb-2.5 sm:mb-5">
+                        {project.tags.slice(0, 2).map((tag) => (
                           <span
                             key={tag}
-                            className="px-2 py-0.5 rounded-md bg-gray-100 text-[10px] sm:text-[11px] font-mono text-gray-700 border border-gray-200/80"
+                            className="px-1.5 py-0.5 rounded bg-gray-100 text-[9px] sm:text-[11px] font-mono text-gray-700 border border-gray-200/80"
                           >
                             {tag}
                           </span>
@@ -236,20 +250,21 @@ export default function WorkPage() {
                     trigger="scroll"
                     once={false}
                     delay={0.1}
-                    className="mt-auto pt-3.5 border-t border-gray-100 flex items-center justify-between font-mono text-[11px]"
+                    className="mt-auto pt-2.5 sm:pt-3.5 border-t border-gray-100 flex items-center justify-between font-mono text-[10px] sm:text-[11px]"
                   >
                     <a
                       href={project.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 font-bold uppercase tracking-wider text-[#eb5424] group-hover:text-black transition-colors"
+                      className="inline-flex items-center gap-1 font-bold uppercase tracking-wider text-[#eb5424] group-hover:text-black transition-colors"
                     >
-                      <span>LAUNCH PROJECT</span>
-                      <ArrowUpRight className="w-3.5 h-3.5" />
+                      <span className="hidden sm:inline">LAUNCH PROJECT</span>
+                      <span className="sm:hidden">LAUNCH</span>
+                      <ArrowUpRight className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
                     </a>
 
-                    <span className="text-gray-400">
-                      ORDER // {project.displayOrder.toString().padStart(2, "0")}
+                    <span className="text-gray-400 text-[9px] sm:text-[11px]">
+                      {project.displayOrder.toString().padStart(2, "0")}
                     </span>
                   </FadeContent>
                 </motion.article>

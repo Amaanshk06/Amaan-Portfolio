@@ -73,16 +73,17 @@ function ContactFormInner() {
   };
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-stretch">
+    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
       {/* Left Column: Contact Details & SLA Info */}
       <motion.div
-        initial={{ opacity: 0, x: -40 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.7, delay: 0.2 }}
-        className="lg:col-span-5 flex flex-col justify-between h-full space-y-8"
+        initial={{ opacity: 1, y: 0 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+        className="lg:col-span-5 flex flex-col space-y-6 text-center lg:text-left items-center lg:items-start"
       >
         <div>
-          <h2 className="text-2xl sm:text-3xl font-black uppercase font-sans tracking-tight text-white mb-4">
+          <h2 className="text-2xl sm:text-3xl font-black uppercase font-sans tracking-tight text-white mb-3 sm:mb-4">
             LET&apos;S TALK ARCHITECTURE.
           </h2>
           <p className="text-sm text-gray-300 font-sans leading-relaxed">
@@ -91,13 +92,13 @@ function ContactFormInner() {
         </div>
 
         {/* Contact Cards */}
-        <div className="space-y-4 font-mono text-xs">
+        <div className="space-y-3 sm:space-y-3.5 font-mono text-xs w-full text-left">
           <a
             href={`mailto:${personalData.email}`}
-            className="flex items-center gap-4 p-5 rounded-2xl bg-white/[0.04] border border-white/10 hover:border-[#eb5424] hover:bg-white/[0.08] transition-all group"
+            className="flex items-center gap-4 p-3.5 sm:p-4 rounded-xl sm:rounded-2xl bg-white/[0.04] border border-white/10 hover:border-[#eb5424] hover:bg-white/[0.08] transition-all group"
           >
-            <div className="w-12 h-12 rounded-xl bg-[#eb5424]/10 border border-[#eb5424]/20 flex items-center justify-center text-[#eb5424] group-hover:scale-110 transition-transform">
-              <Mail className="w-5 h-5" />
+            <div className="w-10 h-10 rounded-xl bg-[#eb5424]/10 border border-[#eb5424]/20 flex items-center justify-center text-[#eb5424] group-hover:scale-110 transition-transform">
+              <Mail className="w-4 h-4" />
             </div>
             <div>
               <span className="text-gray-400 block text-[10px] uppercase">DIRECT EMAIL</span>
@@ -107,9 +108,9 @@ function ContactFormInner() {
             </div>
           </a>
 
-          <div className="flex items-center gap-4 p-5 rounded-2xl bg-white/[0.04] border border-white/10">
-            <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center text-white">
-              <MapPin className="w-5 h-5" />
+          <div className="flex items-center gap-4 p-3.5 sm:p-4 rounded-xl sm:rounded-2xl bg-white/[0.04] border border-white/10">
+            <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-white">
+              <MapPin className="w-4 h-4" />
             </div>
             <div>
               <span className="text-gray-400 block text-[10px] uppercase">LOCATION</span>
@@ -119,8 +120,8 @@ function ContactFormInner() {
         </div>
 
         {/* Socials Box */}
-        <div className="p-6 rounded-2xl bg-white/[0.02] border border-white/10">
-          <span className="font-mono text-[11px] text-gray-400 uppercase tracking-widest block mb-4">
+        <div className="p-4 sm:p-5 rounded-xl sm:rounded-2xl bg-white/[0.02] border border-white/10 w-full text-left">
+          <span className="font-mono text-[11px] text-gray-400 uppercase tracking-widest block mb-3">
             FIND ME ONLINE
           </span>
           <div className="flex flex-wrap gap-2.5 font-mono text-xs">
@@ -129,9 +130,9 @@ function ContactFormInner() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
-              className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white/5 hover:bg-[#eb5424] hover:text-white transition-all text-white border border-white/10 group"
+              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white/5 hover:bg-[#eb5424] hover:text-white transition-all text-white border border-white/10 group"
             >
-              <LinkedInIcon className="w-4 h-4 text-white/90 group-hover:text-white transition-colors" />
+              <LinkedInIcon className="w-3.5 h-3.5 text-white/90 group-hover:text-white transition-colors" />
               <span>LINKEDIN</span>
               <span className="text-gray-400 group-hover:text-white">↗</span>
             </a>
@@ -140,9 +141,9 @@ function ContactFormInner() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
-              className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white/5 hover:bg-[#eb5424] hover:text-white transition-all text-white border border-white/10 group"
+              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white/5 hover:bg-[#eb5424] hover:text-white transition-all text-white border border-white/10 group"
             >
-              <InstagramIcon className="w-4 h-4 text-white/90 group-hover:text-white transition-colors" />
+              <InstagramIcon className="w-3.5 h-3.5 text-white/90 group-hover:text-white transition-colors" />
               <span>INSTAGRAM</span>
               <span className="text-gray-400 group-hover:text-white">↗</span>
             </a>
@@ -151,9 +152,9 @@ function ContactFormInner() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook"
-              className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white/5 hover:bg-[#eb5424] hover:text-white transition-all text-white border border-white/10 group"
+              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white/5 hover:bg-[#eb5424] hover:text-white transition-all text-white border border-white/10 group"
             >
-              <FacebookIcon className="w-4 h-4 text-white/90 group-hover:text-white transition-colors" />
+              <FacebookIcon className="w-3.5 h-3.5 text-white/90 group-hover:text-white transition-colors" />
               <span>FACEBOOK</span>
               <span className="text-gray-400 group-hover:text-white">↗</span>
             </a>
@@ -162,9 +163,9 @@ function ContactFormInner() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
-              className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white/5 hover:bg-[#eb5424] hover:text-white transition-all text-white border border-white/10 group"
+              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white/5 hover:bg-[#eb5424] hover:text-white transition-all text-white border border-white/10 group"
             >
-              <GithubIcon className="w-4 h-4 text-white/90 group-hover:text-white transition-colors" />
+              <GithubIcon className="w-3.5 h-3.5 text-white/90 group-hover:text-white transition-colors" />
               <span>GITHUB</span>
               <span className="text-gray-400 group-hover:text-white">↗</span>
             </a>
@@ -174,13 +175,14 @@ function ContactFormInner() {
 
       {/* Right Column: Full Interactive Contact Form */}
       <motion.div
-        initial={{ opacity: 0, x: 40 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.7, delay: 0.3 }}
-        className="lg:col-span-7 p-8 sm:p-12 rounded-3xl bg-white/[0.03] border border-white/15 backdrop-blur-2xl shadow-2xl relative overflow-hidden"
+        initial={{ opacity: 1, y: 0 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+        className="lg:col-span-7 p-4 sm:p-7 md:p-8 rounded-2xl sm:rounded-3xl bg-white/[0.03] border border-white/15 backdrop-blur-2xl shadow-2xl relative overflow-hidden"
       >
         {/* Top Registration Mark - Centered Confidential Project Brief */}
-        <div className="flex items-center justify-center pb-6 mb-8 border-b border-white/10 text-xs font-mono text-center">
+        <div className="flex items-center justify-center pb-3 sm:pb-3.5 mb-3.5 sm:mb-5 border-b border-white/10 text-xs font-mono text-center">
           <span className="text-[#eb5424] flex items-center justify-center gap-2">
             <Sparkles className="w-3.5 h-3.5" /> CONFIDENTIAL PROJECT BRIEF
           </span>
@@ -190,12 +192,12 @@ function ContactFormInner() {
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="py-16 text-center space-y-4"
+            className="py-12 sm:py-16 text-center space-y-4"
           >
-            <div className="w-16 h-16 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center mx-auto mb-4">
-              <CheckCircle2 className="w-8 h-8" />
+            <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center mx-auto mb-3 sm:mb-4">
+              <CheckCircle2 className="w-7 h-7 sm:w-8 sm:h-8" />
             </div>
-            <h3 className="text-2xl font-black font-sans uppercase text-white">
+            <h3 className="text-xl sm:text-2xl font-black font-sans uppercase text-white">
               Inquiry Dispatched!
             </h3>
             <p className="text-xs sm:text-sm text-gray-400 font-sans max-w-md mx-auto leading-relaxed">
@@ -218,10 +220,10 @@ function ContactFormInner() {
             </button>
           </motion.div>
         ) : (
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4">
+            <div className="grid grid-cols-2 gap-2.5 sm:gap-4">
               <div>
-                <label className="block font-mono text-[11px] text-gray-400 uppercase tracking-widest mb-2">
+                <label className="block font-mono text-[10px] sm:text-[11px] text-gray-400 uppercase tracking-widest mb-1 sm:mb-1.5">
                   Your Full Name *
                 </label>
                 <input
@@ -229,13 +231,13 @@ function ContactFormInner() {
                   required
                   value={formState.name}
                   onChange={(e) => setFormState({ ...formState, name: e.target.value })}
-                  placeholder="e.g. Jordan Lee"
-                  className="w-full px-4 py-3.5 rounded-xl bg-black/60 border border-white/15 text-white placeholder-white/30 text-xs font-sans focus:outline-none focus:border-[#eb5424] focus:ring-1 focus:ring-[#eb5424] transition-all"
+                  placeholder="Jordan Lee"
+                  className="w-full px-3 py-2 sm:px-3.5 sm:py-2.5 rounded-lg sm:rounded-xl bg-black/60 border border-white/15 text-white placeholder-white/30 text-xs font-sans focus:outline-none focus:border-[#eb5424] focus:ring-1 focus:ring-[#eb5424] transition-all"
                 />
               </div>
 
               <div>
-                <label className="block font-mono text-[11px] text-gray-400 uppercase tracking-widest mb-2">
+                <label className="block font-mono text-[10px] sm:text-[11px] text-gray-400 uppercase tracking-widest mb-1 sm:mb-1.5">
                   Email Address *
                 </label>
                 <input
@@ -244,20 +246,20 @@ function ContactFormInner() {
                   value={formState.email}
                   onChange={(e) => setFormState({ ...formState, email: e.target.value })}
                   placeholder="jordan@venture.com"
-                  className="w-full px-4 py-3.5 rounded-xl bg-black/60 border border-white/15 text-white placeholder-white/30 text-xs font-sans focus:outline-none focus:border-[#eb5424] focus:ring-1 focus:ring-[#eb5424] transition-all"
+                  className="w-full px-3 py-2 sm:px-3.5 sm:py-2.5 rounded-lg sm:rounded-xl bg-black/60 border border-white/15 text-white placeholder-white/30 text-xs font-sans focus:outline-none focus:border-[#eb5424] focus:ring-1 focus:ring-[#eb5424] transition-all"
                 />
               </div>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div className="grid grid-cols-2 gap-2.5 sm:gap-4">
               <div>
-                <label className="block font-mono text-[11px] text-gray-400 uppercase tracking-widest mb-2">
+                <label className="block font-mono text-[10px] sm:text-[11px] text-gray-400 uppercase tracking-widest mb-1 sm:mb-1.5">
                   Requested Service
                 </label>
                 <select
                   value={formState.service}
                   onChange={(e) => setFormState({ ...formState, service: e.target.value })}
-                  className="w-full px-4 py-3.5 rounded-xl bg-black/60 border border-white/15 text-white text-xs font-sans focus:outline-none focus:border-[#eb5424] focus:ring-1 focus:ring-[#eb5424] transition-all cursor-pointer"
+                  className="w-full px-2.5 py-2 sm:px-3.5 sm:py-2.5 rounded-lg sm:rounded-xl bg-black/60 border border-white/15 text-white text-[11px] sm:text-xs font-sans focus:outline-none focus:border-[#eb5424] focus:ring-1 focus:ring-[#eb5424] transition-all cursor-pointer truncate"
                 >
                   <option className="bg-[#111]">Web &amp; Frontend Architecture</option>
                   <option className="bg-[#111]">Performance &amp; 3D WebGL</option>
@@ -267,13 +269,13 @@ function ContactFormInner() {
               </div>
 
               <div>
-                <label className="block font-mono text-[11px] text-gray-400 uppercase tracking-widest mb-2">
+                <label className="block font-mono text-[10px] sm:text-[11px] text-gray-400 uppercase tracking-widest mb-1 sm:mb-1.5">
                   Estimated Budget
                 </label>
                 <select
                   value={formState.budget}
                   onChange={(e) => setFormState({ ...formState, budget: e.target.value })}
-                  className="w-full px-4 py-3.5 rounded-xl bg-black/60 border border-white/15 text-white text-xs font-sans focus:outline-none focus:border-[#eb5424] focus:ring-1 focus:ring-[#eb5424] transition-all cursor-pointer"
+                  className="w-full px-2.5 py-2 sm:px-3.5 sm:py-2.5 rounded-lg sm:rounded-xl bg-black/60 border border-white/15 text-white text-[11px] sm:text-xs font-sans focus:outline-none focus:border-[#eb5424] focus:ring-1 focus:ring-[#eb5424] transition-all cursor-pointer truncate"
                 >
                   <option className="bg-[#111]">₹8,000 onwards (Landing Page Website)</option>
                   <option className="bg-[#111]">₹15,000 onwards (Multi-Page Business Website)</option>
@@ -286,26 +288,26 @@ function ContactFormInner() {
             </div>
 
             <div>
-              <label className="block font-mono text-[11px] text-gray-400 uppercase tracking-widest mb-2">
+              <label className="block font-mono text-[10px] sm:text-[11px] text-gray-400 uppercase tracking-widest mb-1 sm:mb-1.5">
                 Project Scope, Goals &amp; Launch Date *
               </label>
               <textarea
                 required
-                rows={5}
+                rows={3}
                 value={formState.message}
                 onChange={(e) => setFormState({ ...formState, message: e.target.value })}
-                placeholder="Describe your current tech stack, target timeline, features, and visual style..."
-                className="w-full px-4 py-3.5 rounded-xl bg-black/60 border border-white/15 text-white placeholder-white/30 text-xs font-sans focus:outline-none focus:border-[#eb5424] focus:ring-1 focus:ring-[#eb5424] transition-all resize-none"
+                placeholder="Describe your tech stack, target timeline, features..."
+                className="w-full px-3 py-2 sm:px-3.5 sm:py-2 rounded-lg sm:rounded-xl bg-black/60 border border-white/15 text-white placeholder-white/30 text-xs font-sans focus:outline-none focus:border-[#eb5424] focus:ring-1 focus:ring-[#eb5424] transition-all resize-none"
               />
             </div>
 
             {/* Submit Button Centered */}
-            <div className="flex justify-center pt-2">
+            <div className="flex justify-center pt-2 sm:pt-3">
               <MagneticButton strength={0.2}>
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="px-10 sm:px-14 py-4 rounded-xl bg-[#eb5424] hover:bg-[#f04c1a] text-white font-mono text-xs font-black uppercase tracking-widest flex items-center justify-center gap-2 transition-all shadow-xl hover:shadow-[0_0_25px_rgba(235,84,36,0.4)] disabled:opacity-50 cursor-pointer"
+                  className="px-8 sm:px-12 py-2.5 sm:py-3.5 rounded-xl bg-[#eb5424] hover:bg-[#f04c1a] text-white font-mono text-xs font-black uppercase tracking-widest flex items-center justify-center gap-2 transition-all shadow-xl hover:shadow-[0_0_25px_rgba(235,84,36,0.4)] disabled:opacity-50 cursor-pointer"
                 >
                   {isSubmitting ? (
                     <span>SUBMITTING...</span>
@@ -367,7 +369,7 @@ export default function ContactPage() {
       </section>
 
       {/* Main Form Section */}
-      <section className="py-20 max-w-7xl mx-auto px-6 sm:px-12">
+      <section className="py-8 sm:py-12 max-w-7xl mx-auto px-6 sm:px-12">
         <Suspense fallback={<div className="text-center py-20 font-mono text-xs text-gray-400">Loading form...</div>}>
           <ContactFormInner />
         </Suspense>

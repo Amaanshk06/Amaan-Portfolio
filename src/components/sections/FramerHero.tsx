@@ -38,7 +38,7 @@ export function FramerHero({ startAnimation = true }: FramerHeroProps) {
     <section
       ref={containerRef}
       id="hero"
-      className="relative min-h-screen bg-[#eb5424] text-white overflow-hidden flex flex-col justify-between select-none"
+      className="relative min-h-[560px] xs:min-h-[620px] sm:min-h-screen bg-[#eb5424] text-white overflow-hidden flex flex-col justify-between select-none"
     >
       {/* Background Precision Blueprint Grid & Crosshairs */}
       <div className="absolute inset-0 pointer-events-none z-0">
@@ -72,7 +72,7 @@ export function FramerHero({ startAnimation = true }: FramerHeroProps) {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={startAnimation ? { opacity: 0.15, scale: 1 } : { opacity: 0, scale: 0.95 }}
           transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-          className="w-full text-center font-black tracking-tighter uppercase font-sans text-[22vw] leading-none text-white"
+          className="w-full text-center font-black tracking-tighter uppercase font-sans text-[26vw] sm:text-[22vw] leading-none text-white -translate-y-4 sm:translate-y-0"
         >
           AMAAN
         </motion.div>
@@ -98,7 +98,7 @@ export function FramerHero({ startAnimation = true }: FramerHeroProps) {
               : {}
           }
           transition={{ duration: 1.15, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-          className="relative w-[300px] sm:w-[540px] md:w-[680px] lg:w-[820px] xl:w-[900px] h-[55vh] sm:h-[75vh] md:h-[82vh] max-h-[860px] mb-8 sm:mb-0"
+          className="relative w-[280px] xs:w-[320px] sm:w-[540px] md:w-[680px] lg:w-[820px] xl:w-[900px] h-[52vh] sm:h-[75vh] md:h-[82vh] max-h-[860px] mb-1 sm:mb-0"
         >
           <motion.div
             style={{ y: yCharacter, scale: scaleCharacter }}
@@ -120,10 +120,10 @@ export function FramerHero({ startAnimation = true }: FramerHeroProps) {
       {/* FOREGROUND CONTENT LAYER (Z-20) */}
       <motion.div
         style={{ opacity: opacityForeground }}
-        className="relative z-20 max-w-7xl mx-auto w-full px-6 sm:px-12 flex-1 flex flex-col justify-between pt-4 pb-8 sm:pb-10"
+        className="relative z-20 max-w-7xl mx-auto w-full px-4 sm:px-12 flex-1 flex flex-col justify-between pt-2 sm:pt-4 pb-4 sm:pb-10"
       >
         {/* Top/Mid Row: Statement Quote & Floating Code Card */}
-        <div className="flex items-start justify-between gap-6 w-full mt-2 sm:mt-4">
+        <div className="flex items-start justify-between gap-4 sm:gap-6 w-full mt-1 sm:mt-4">
           {/* Middle Left Statement Quote with FadeContent */}
           <FadeContent
             effect="fade"
@@ -146,7 +146,7 @@ export function FramerHero({ startAnimation = true }: FramerHeroProps) {
             initial={{ opacity: 0, x: 50, scale: 0.95 }}
             animate={startAnimation ? { opacity: 1, x: 0, scale: 1 } : { opacity: 0, x: 50, scale: 0.95 }}
             transition={{ duration: 0.9, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
-            className="w-full max-w-[200px] xs:max-w-[220px] sm:max-w-[320px] pointer-events-auto ml-auto"
+            className="w-full max-w-[190px] xs:max-w-[210px] sm:max-w-[320px] pointer-events-auto ml-auto"
           >
             <TiltCard tiltIntensity={4}>
               <div className="rounded-xl sm:rounded-2xl bg-black/85 backdrop-blur-xl p-2.5 sm:p-5 border border-white/20 shadow-2xl">

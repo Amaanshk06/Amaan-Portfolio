@@ -99,62 +99,62 @@ export function ImpactSection() {
         </div>
 
         {/* 3 Columns Layout with Parallax */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-8 items-stretch">
           {/* Column 1: Metrics Cards with Animated Counters (4 cols) */}
-          <motion.div style={{ y: yCol1 }} className="lg:col-span-4 flex flex-col gap-6 order-2 lg:order-1 h-full">
+          <motion.div style={{ y: yCol1 }} className="lg:col-span-4 grid grid-cols-2 lg:flex lg:flex-col gap-3 sm:gap-6 order-2 lg:order-1 h-full">
             {/* Metric 1 */}
-            <TiltCard tiltIntensity={5} className="flex-1 flex flex-col">
+            <TiltCard tiltIntensity={5} className="flex-1 flex flex-col h-full">
               <motion.div
                 initial={{ opacity: 0, x: -40 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: false, amount: 0.2 }}
+                viewport={{ once: true, amount: 0.15 }}
                 transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-                className="p-8 rounded-3xl bg-[#f9fafb] border border-gray-200 hover:border-[#eb5424] hover:shadow-xl transition-all duration-300 flex flex-col justify-between group h-full flex-1"
+                className="p-4 sm:p-8 rounded-2xl sm:rounded-3xl bg-[#f9fafb] border border-gray-200 hover:border-[#eb5424] hover:shadow-xl transition-all duration-300 flex flex-col justify-between group h-full flex-1"
               >
                 <div>
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="font-mono text-xs font-bold uppercase tracking-wider text-[#eb5424]">
-                      * DEV EXPERIENCE
+                  <div className="flex items-center justify-between mb-2 sm:mb-4">
+                    <span className="font-mono text-[10px] sm:text-xs font-bold uppercase tracking-wider text-[#eb5424]">
+                      * DEV EXP
                     </span>
-                    <TrendingUp className="w-4 h-4 text-[#eb5424]" />
+                    <TrendingUp className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#eb5424]" />
                   </div>
-                  <div className="text-6xl sm:text-7xl font-black tracking-tight text-[#0a0a0a] font-sans mb-3 group-hover:text-[#eb5424] transition-colors">
+                  <div className="text-3xl sm:text-7xl font-black tracking-tight text-[#0a0a0a] font-sans mb-1.5 sm:mb-3 group-hover:text-[#eb5424] transition-colors">
                     <AnimatedCounter to={15} suffix="+" duration={1.6} delay={0.1} />
                   </div>
-                  <h3 className="font-sans text-sm font-bold text-gray-900 uppercase tracking-wide mb-1">
-                    Production Projects Shipped
+                  <h3 className="font-sans text-xs sm:text-sm font-bold text-gray-900 uppercase tracking-wide mb-1 leading-tight">
+                    Production Shipped
                   </h3>
                 </div>
-                <p className="text-xs text-gray-500 leading-relaxed font-sans mt-4">
+                <p className="text-[10px] sm:text-xs text-gray-500 leading-relaxed font-sans mt-2 sm:mt-4 line-clamp-3 sm:line-clamp-none">
                   Creating modern, ultra-responsive web applications across hospitality, ecommerce, and corporate platforms.
                 </p>
               </motion.div>
             </TiltCard>
 
             {/* Metric 2 */}
-            <TiltCard tiltIntensity={5} className="flex-1 flex flex-col">
+            <TiltCard tiltIntensity={5} className="flex-1 flex flex-col h-full">
               <motion.div
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: false, amount: 0.2 }}
+                viewport={{ once: true, amount: 0.15 }}
                 transition={{ duration: 0.7, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-                className="p-8 rounded-3xl bg-[#f9fafb] border border-gray-200 hover:border-[#eb5424] hover:shadow-xl transition-all duration-300 flex flex-col justify-between group h-full flex-1"
+                className="p-4 sm:p-8 rounded-2xl sm:rounded-3xl bg-[#f9fafb] border border-gray-200 hover:border-[#eb5424] hover:shadow-xl transition-all duration-300 flex flex-col justify-between group h-full flex-1"
               >
                 <div>
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="font-mono text-xs font-bold uppercase tracking-wider text-[#eb5424]">
-                      * SATISFACTION RATE
+                  <div className="flex items-center justify-between mb-2 sm:mb-4">
+                    <span className="font-mono text-[10px] sm:text-xs font-bold uppercase tracking-wider text-[#eb5424]">
+                      * SATISFACTION
                     </span>
-                    <Award className="w-4 h-4 text-[#eb5424]" />
+                    <Award className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#eb5424]" />
                   </div>
-                  <div className="text-6xl sm:text-7xl font-black tracking-tight text-[#0a0a0a] font-sans mb-3 group-hover:text-[#eb5424] transition-colors">
+                  <div className="text-3xl sm:text-7xl font-black tracking-tight text-[#0a0a0a] font-sans mb-1.5 sm:mb-3 group-hover:text-[#eb5424] transition-colors">
                     <AnimatedCounter to={98} suffix="%" duration={1.8} delay={0.25} />
                   </div>
-                  <h3 className="font-sans text-sm font-bold text-gray-900 uppercase tracking-wide mb-1">
-                    Client Satisfaction Rate
+                  <h3 className="font-sans text-xs sm:text-sm font-bold text-gray-900 uppercase tracking-wide mb-1 leading-tight">
+                    Client Satisfaction
                   </h3>
                 </div>
-                <p className="text-xs text-gray-500 leading-relaxed font-sans mt-4">
+                <p className="text-[10px] sm:text-xs text-gray-500 leading-relaxed font-sans mt-2 sm:mt-4 line-clamp-3 sm:line-clamp-none">
                   Delivering reliable, pixel-perfect code on deadline with continuous post-launch warranty support.
                 </p>
               </motion.div>
@@ -162,79 +162,79 @@ export function ImpactSection() {
           </motion.div>
 
           {/* Column 2: Center Clients & Testimonial with Parallax (4 cols) - ALIGNED FLUSH WITH COL 1 & 3 */}
-          <motion.div style={{ y: yCol2 }} className="lg:col-span-4 flex flex-col gap-6 order-3 lg:order-2 h-full">
+          <motion.div style={{ y: yCol2 }} className="lg:col-span-4 grid grid-cols-2 lg:flex lg:flex-col gap-3 sm:gap-6 order-3 lg:order-2 h-full">
             {/* Top: 25+ Brands Served Card */}
-            <TiltCard tiltIntensity={5} className="flex-1 flex flex-col">
+            <TiltCard tiltIntensity={5} className="flex-1 flex flex-col h-full">
               <motion.div
                 initial={{ opacity: 0, y: 50, scale: 0.95 }}
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                viewport={{ once: false, amount: 0.2 }}
+                viewport={{ once: true, amount: 0.15 }}
                 transition={{ duration: 0.7, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
-                className="p-8 rounded-3xl bg-[#f9fafb] border border-gray-200 hover:border-[#eb5424] hover:shadow-xl transition-all duration-300 flex flex-col justify-between group h-full flex-1"
+                className="p-4 sm:p-8 rounded-2xl sm:rounded-3xl bg-[#f9fafb] border border-gray-200 hover:border-[#eb5424] hover:shadow-xl transition-all duration-300 flex flex-col justify-between group h-full flex-1"
               >
-                <div className="flex items-center justify-between mb-6">
-                  <span className="font-mono text-xs font-bold uppercase tracking-wider text-[#eb5424]">
-                    * TRUSTED BY CLIENTS
-                  </span>
-                </div>
-
-                {/* Avatar Stack */}
-                <div className="flex items-center -space-x-3 mb-4">
-                  <div className="w-12 h-12 rounded-full border-2 border-white bg-gradient-to-tr from-orange-400 to-amber-500 flex items-center justify-center text-white font-black text-sm shadow-md">
-                    SP
-                  </div>
-                  <div className="w-12 h-12 rounded-full border-2 border-white bg-gradient-to-tr from-blue-500 to-cyan-400 flex items-center justify-center text-white font-black text-sm shadow-md">
-                    SM
-                  </div>
-                  <div className="w-12 h-12 rounded-full border-2 border-white bg-gradient-to-tr from-purple-500 to-pink-500 flex items-center justify-center text-white font-black text-sm shadow-md">
-                    AY
-                  </div>
-                  <div className="w-12 h-12 rounded-full border-2 border-white bg-black text-white flex items-center justify-center font-mono font-bold text-xs shadow-md">
-                    +25
-                  </div>
-                </div>
-
                 <div>
-                  <div className="text-3xl font-black text-[#0a0a0a] font-sans mb-1 group-hover:text-[#eb5424] transition-colors">
-                    <AnimatedCounter to={25} suffix="+ Brands & Clients" duration={1.6} delay={0.2} />
+                  <div className="flex items-center justify-between mb-3 sm:mb-6">
+                    <span className="font-mono text-[10px] sm:text-xs font-bold uppercase tracking-wider text-[#eb5424]">
+                      * TRUSTED
+                    </span>
                   </div>
-                  <p className="text-xs text-gray-500 font-sans leading-relaxed">
-                    Partnered with businesses across Mumbai, Goa, and global markets to launch high-conversion platforms.
-                  </p>
+
+                  {/* Avatar Stack */}
+                  <div className="flex items-center -space-x-2 sm:-space-x-3 mb-3 sm:mb-4">
+                    <div className="w-8 h-8 sm:w-12 sm:h-12 rounded-full border-2 border-white bg-gradient-to-tr from-orange-400 to-amber-500 flex items-center justify-center text-white font-black text-[10px] sm:text-sm shadow-md">
+                      SP
+                    </div>
+                    <div className="w-8 h-8 sm:w-12 sm:h-12 rounded-full border-2 border-white bg-gradient-to-tr from-blue-500 to-cyan-400 flex items-center justify-center text-white font-black text-[10px] sm:text-sm shadow-md">
+                      SM
+                    </div>
+                    <div className="w-8 h-8 sm:w-12 sm:h-12 rounded-full border-2 border-white bg-gradient-to-tr from-purple-500 to-pink-500 flex items-center justify-center text-white font-black text-[10px] sm:text-sm shadow-md">
+                      AY
+                    </div>
+                    <div className="w-8 h-8 sm:w-12 sm:h-12 rounded-full border-2 border-white bg-black text-white flex items-center justify-center font-mono font-bold text-[9px] sm:text-xs shadow-md">
+                      +25
+                    </div>
+                  </div>
+
+                  <div className="text-xl sm:text-3xl font-black text-[#0a0a0a] font-sans mb-1 group-hover:text-[#eb5424] transition-colors leading-tight">
+                    <AnimatedCounter to={25} suffix="+ Brands" duration={1.6} delay={0.2} />
+                  </div>
                 </div>
+                <p className="text-[10px] sm:text-xs text-gray-500 font-sans leading-relaxed line-clamp-2 sm:line-clamp-none mt-2 sm:mt-0">
+                  Partnered with businesses across Mumbai, Goa, and global markets.
+                </p>
               </motion.div>
             </TiltCard>
 
             {/* Bottom: Client Quote Card */}
-            <TiltCard tiltIntensity={5} className="flex-1 flex flex-col">
+            <TiltCard tiltIntensity={5} className="flex-1 flex flex-col h-full">
               <motion.div
                 initial={{ opacity: 0, y: 55 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: false, amount: 0.2 }}
+                viewport={{ once: true, amount: 0.15 }}
                 transition={{ duration: 0.7, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
-                className="p-8 rounded-3xl bg-[#0a0a0a] text-white flex-1 flex flex-col justify-between relative overflow-hidden shadow-xl h-full"
+                className="p-4 sm:p-8 rounded-2xl sm:rounded-3xl bg-[#0a0a0a] text-white flex-1 flex flex-col justify-between relative overflow-hidden shadow-xl h-full"
               >
                 <div className="absolute top-0 right-0 w-32 h-32 bg-[#eb5424]/10 rounded-full blur-2xl pointer-events-none" />
 
                 <div>
-                  <div className="flex items-center gap-1 text-[#eb5424] mb-4">
+                  <div className="flex items-center gap-0.5 sm:gap-1 text-[#eb5424] mb-2 sm:mb-4">
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-current" />
+                      <Star key={i} className="w-3 h-3 sm:w-4 sm:h-4 fill-current" />
                     ))}
                   </div>
 
-                  <p className="text-sm font-sans leading-relaxed text-gray-300 italic mb-6">
-                    &ldquo;Amaan transformed our web portal into a fast, responsive, and reliable platform that handles thousands of daily visits effortlessly.&rdquo;
+                  <p className="text-[11px] sm:text-sm font-sans leading-relaxed text-gray-300 italic mb-3 sm:mb-6 line-clamp-3 sm:line-clamp-none">
+                    &ldquo;Amaan transformed our web portal into a fast, responsive platform.&rdquo;
                   </p>
                 </div>
 
-                <div className="flex items-center gap-3 pt-4 border-t border-white/10">
-                  <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-[#eb5424] font-black text-xs font-mono">
+                <div className="flex items-center gap-2 sm:gap-3 pt-2.5 sm:pt-4 border-t border-white/10">
+                  <div className="w-7 h-7 sm:w-10 sm:h-10 rounded-full bg-white/10 flex items-center justify-center text-[#eb5424] font-black text-[10px] sm:text-xs font-mono shrink-0">
                     AY
                   </div>
-                  <div>
-                    <h4 className="text-xs font-bold font-sans text-white">Arun Ramraj Yadav</h4>
-                    <p className="text-[11px] text-gray-400 font-mono">MD, Frisson Hospital</p>
+                  <div className="min-w-0">
+                    <h4 className="text-[11px] sm:text-xs font-bold font-sans text-white truncate">Arun Yadav</h4>
+                    <p className="text-[9px] sm:text-[11px] text-gray-400 font-mono truncate">MD, Frisson Hospital</p>
                   </div>
                 </div>
               </motion.div>

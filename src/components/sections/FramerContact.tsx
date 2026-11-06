@@ -83,7 +83,7 @@ export function FramerContact() {
     <section
       ref={containerRef}
       id="contact"
-      className="py-24 sm:py-32 bg-[#070707] text-white relative z-20 overflow-hidden select-none"
+      className="py-16 sm:py-24 bg-[#070707] text-white relative z-20 overflow-hidden select-none"
     >
       {/* Background Precision Blueprint Grid */}
       <motion.div style={{ y: yBg }} className="absolute inset-0 pointer-events-none z-0">
@@ -112,17 +112,17 @@ export function FramerContact() {
       </motion.div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-12">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           {/* Left Column: Heading & Contact Info */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.75, ease: [0.16, 1, 0.3, 1] }}
-            className="lg:col-span-5 flex flex-col justify-between h-full text-center lg:text-left items-center lg:items-start"
+            initial={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="lg:col-span-5 flex flex-col text-center lg:text-left items-center lg:items-start"
           >
             <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
-              <div className="inline-flex items-center gap-2 mb-4 justify-center lg:justify-start">
+              <div className="inline-flex items-center gap-2 mb-3 sm:mb-4 justify-center lg:justify-start">
                 <span className="font-mono text-xs font-bold uppercase tracking-widest text-[#eb5424]">
                   * INITIATE A PROJECT
                 </span>
@@ -137,14 +137,14 @@ export function FramerContact() {
                 threshold={0.15}
                 trigger="scroll"
               >
-                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[54px] font-black uppercase tracking-tight text-white font-sans leading-[1.08] mb-6 text-center lg:text-left">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[54px] font-black uppercase tracking-tight text-white font-sans leading-[1.08] mb-4 sm:mb-5 text-center lg:text-left">
                   <div>LET&apos;S BUILD SOMETHING</div>
                   <div className="text-gray-400">TIMELESS.</div>
                 </h2>
               </FadeContent>
 
               <FadeContent effect="fade" duration={1.0} delay={0.2} threshold={0.15}>
-                <p className="text-sm sm:text-base text-gray-400 font-sans leading-relaxed mb-8 text-center lg:text-left">
+                <p className="text-sm sm:text-base text-gray-400 font-sans leading-relaxed mb-6 sm:mb-8 text-center lg:text-left">
                   Have a new web application, high-converting storefront, or complex animation challenge in mind? Drop a note below and let&apos;s engineer something unforgettable.
                 </p>
               </FadeContent>
@@ -157,11 +157,11 @@ export function FramerContact() {
               stagger={0.1}
               delay={0.3}
               threshold={0.15}
-              className="space-y-4 pt-6 border-t border-white/10 font-mono text-xs mt-auto w-full text-left"
+              className="space-y-3 sm:space-y-3.5 pt-5 sm:pt-6 border-t border-white/10 font-mono text-xs w-full text-left"
             >
               <a
                 href={`mailto:${personalData.email}`}
-                className="flex items-center gap-4 p-4 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-[#eb5424] hover:bg-white/[0.06] transition-all group"
+                className="flex items-center gap-4 p-3.5 sm:p-4 rounded-xl sm:rounded-2xl bg-white/[0.03] border border-white/10 hover:border-[#eb5424] hover:bg-white/[0.06] transition-all group"
               >
                 <div className="w-10 h-10 rounded-xl bg-[#eb5424]/10 border border-[#eb5424]/20 flex items-center justify-center text-[#eb5424] group-hover:scale-110 transition-transform">
                   <Mail className="w-4 h-4" />
@@ -174,7 +174,7 @@ export function FramerContact() {
                 </div>
               </a>
 
-              <div className="flex items-center gap-4 p-4 rounded-2xl bg-white/[0.03] border border-white/10">
+              <div className="flex items-center gap-4 p-3.5 sm:p-4 rounded-xl sm:rounded-2xl bg-white/[0.03] border border-white/10">
                 <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-white">
                   <MapPin className="w-4 h-4" />
                 </div>
@@ -185,8 +185,8 @@ export function FramerContact() {
               </div>
 
               {/* Socials Box */}
-              <div className="p-4 rounded-2xl bg-white/[0.03] border border-white/10">
-                <span className="font-mono text-[10px] text-gray-400 uppercase tracking-widest block mb-3">
+              <div className="p-3.5 sm:p-4 rounded-xl sm:rounded-2xl bg-white/[0.03] border border-white/10">
+                <span className="font-mono text-[10px] text-gray-400 uppercase tracking-widest block mb-2.5">
                   FIND ME ONLINE
                 </span>
                 <div className="flex flex-wrap gap-2 font-mono text-xs">
@@ -241,14 +241,14 @@ export function FramerContact() {
 
           {/* Right Column: Interactive Contact Form with Slide-In */}
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.75, ease: [0.16, 1, 0.3, 1] }}
-            className="lg:col-span-7 p-8 sm:p-12 rounded-3xl bg-white/[0.03] border border-white/15 backdrop-blur-2xl shadow-2xl relative overflow-hidden flex flex-col justify-between h-full"
+            initial={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="lg:col-span-7 p-4 sm:p-7 md:p-8 rounded-2xl sm:rounded-3xl bg-white/[0.03] border border-white/15 backdrop-blur-2xl shadow-2xl relative overflow-hidden"
           >
-            {/* Top Registration Mark - Centered Confidential Project Brief, response time removed */}
-            <div className="flex items-center justify-center pb-6 mb-8 border-b border-white/10 text-xs font-mono text-center">
+            {/* Top Registration Mark - Centered Confidential Project Brief */}
+            <div className="flex items-center justify-center pb-3 sm:pb-3.5 mb-3.5 sm:mb-5 border-b border-white/10 text-xs font-mono text-center">
               <span className="text-[#eb5424] flex items-center justify-center gap-2">
                 <Sparkles className="w-3.5 h-3.5" /> CONFIDENTIAL PROJECT BRIEF
               </span>
@@ -258,12 +258,12 @@ export function FramerContact() {
               <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
-                className="py-16 text-center space-y-4"
+                className="py-12 sm:py-16 text-center space-y-4"
               >
-                <div className="w-16 h-16 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center mx-auto mb-4">
-                  <CheckCircle2 className="w-8 h-8" />
+                <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                  <CheckCircle2 className="w-7 h-7 sm:w-8 sm:h-8" />
                 </div>
-                <h3 className="text-2xl font-black font-sans uppercase text-white">
+                <h3 className="text-xl sm:text-2xl font-black font-sans uppercase text-white">
                   Message Transmitted Successfully!
                 </h3>
                 <p className="text-xs sm:text-sm text-gray-400 font-sans max-w-md mx-auto leading-relaxed">
@@ -286,11 +286,11 @@ export function FramerContact() {
                 </button>
               </motion.div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4">
+                <div className="grid grid-cols-2 gap-2.5 sm:gap-4">
                   {/* Name Input */}
                   <div>
-                    <label className="block font-mono text-[11px] text-gray-400 uppercase tracking-widest mb-2">
+                    <label className="block font-mono text-[10px] sm:text-[11px] text-gray-400 uppercase tracking-widest mb-1 sm:mb-1.5">
                       Your Name *
                     </label>
                     <input
@@ -298,14 +298,14 @@ export function FramerContact() {
                       required
                       value={formState.name}
                       onChange={(e) => setFormState({ ...formState, name: e.target.value })}
-                      placeholder="e.g. Alex Morgan"
-                      className="w-full px-4 py-3.5 rounded-xl bg-black/60 border border-white/15 text-white placeholder-white/30 text-xs font-sans focus:outline-none focus:border-[#eb5424] focus:ring-1 focus:ring-[#eb5424] transition-all"
+                      placeholder="Alex Morgan"
+                      className="w-full px-3 py-2 sm:px-3.5 sm:py-2.5 rounded-lg sm:rounded-xl bg-black/60 border border-white/15 text-white placeholder-white/30 text-xs font-sans focus:outline-none focus:border-[#eb5424] focus:ring-1 focus:ring-[#eb5424] transition-all"
                     />
                   </div>
 
                   {/* Email Input */}
                   <div>
-                    <label className="block font-mono text-[11px] text-gray-400 uppercase tracking-widest mb-2">
+                    <label className="block font-mono text-[10px] sm:text-[11px] text-gray-400 uppercase tracking-widest mb-1 sm:mb-1.5">
                       Work Email *
                     </label>
                     <input
@@ -314,21 +314,21 @@ export function FramerContact() {
                       value={formState.email}
                       onChange={(e) => setFormState({ ...formState, email: e.target.value })}
                       placeholder="alex@company.com"
-                      className="w-full px-4 py-3.5 rounded-xl bg-black/60 border border-white/15 text-white placeholder-white/30 text-xs font-sans focus:outline-none focus:border-[#eb5424] focus:ring-1 focus:ring-[#eb5424] transition-all"
+                      className="w-full px-3 py-2 sm:px-3.5 sm:py-2.5 rounded-lg sm:rounded-xl bg-black/60 border border-white/15 text-white placeholder-white/30 text-xs font-sans focus:outline-none focus:border-[#eb5424] focus:ring-1 focus:ring-[#eb5424] transition-all"
                     />
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div className="grid grid-cols-2 gap-2.5 sm:gap-4">
                   {/* Service Dropdown */}
                   <div>
-                    <label className="block font-mono text-[11px] text-gray-400 uppercase tracking-widest mb-2">
+                    <label className="block font-mono text-[10px] sm:text-[11px] text-gray-400 uppercase tracking-widest mb-1 sm:mb-1.5">
                       Service Category
                     </label>
                     <select
                       value={formState.service}
                       onChange={(e) => setFormState({ ...formState, service: e.target.value })}
-                      className="w-full px-4 py-3.5 rounded-xl bg-black/60 border border-white/15 text-white text-xs font-sans focus:outline-none focus:border-[#eb5424] focus:ring-1 focus:ring-[#eb5424] transition-all cursor-pointer"
+                      className="w-full px-2.5 py-2 sm:px-3.5 sm:py-2.5 rounded-lg sm:rounded-xl bg-black/60 border border-white/15 text-white text-[11px] sm:text-xs font-sans focus:outline-none focus:border-[#eb5424] focus:ring-1 focus:ring-[#eb5424] transition-all cursor-pointer truncate"
                     >
                       <option className="bg-[#111]">Web &amp; Frontend Architecture</option>
                       <option className="bg-[#111]">Performance &amp; 3D WebGL</option>
@@ -339,13 +339,13 @@ export function FramerContact() {
 
                   {/* Budget Selector */}
                   <div>
-                    <label className="block font-mono text-[11px] text-gray-400 uppercase tracking-widest mb-2">
+                    <label className="block font-mono text-[10px] sm:text-[11px] text-gray-400 uppercase tracking-widest mb-1 sm:mb-1.5">
                       Project Budget
                     </label>
                     <select
                       value={formState.budget}
                       onChange={(e) => setFormState({ ...formState, budget: e.target.value })}
-                      className="w-full px-4 py-3.5 rounded-xl bg-black/60 border border-white/15 text-white text-xs font-sans focus:outline-none focus:border-[#eb5424] focus:ring-1 focus:ring-[#eb5424] transition-all cursor-pointer"
+                      className="w-full px-2.5 py-2 sm:px-3.5 sm:py-2.5 rounded-lg sm:rounded-xl bg-black/60 border border-white/15 text-white text-[11px] sm:text-xs font-sans focus:outline-none focus:border-[#eb5424] focus:ring-1 focus:ring-[#eb5424] transition-all cursor-pointer truncate"
                     >
                       <option className="bg-[#111]">₹8,000 onwards (Landing Page Website)</option>
                       <option className="bg-[#111]">₹15,000 onwards (Multi-Page Business Website)</option>
@@ -358,26 +358,26 @@ export function FramerContact() {
 
                 {/* Message Textarea */}
                 <div>
-                  <label className="block font-mono text-[11px] text-gray-400 uppercase tracking-widest mb-2">
+                  <label className="block font-mono text-[10px] sm:text-[11px] text-gray-400 uppercase tracking-widest mb-1 sm:mb-1.5">
                     Project Overview &amp; Goals *
                   </label>
                   <textarea
                     required
-                    rows={4}
+                    rows={3}
                     value={formState.message}
                     onChange={(e) => setFormState({ ...formState, message: e.target.value })}
                     placeholder="Tell me about your product, timeline, and goals..."
-                    className="w-full px-4 py-3.5 rounded-xl bg-black/60 border border-white/15 text-white placeholder-white/30 text-xs font-sans focus:outline-none focus:border-[#eb5424] focus:ring-1 focus:ring-[#eb5424] transition-all resize-none"
+                    className="w-full px-3 py-2 sm:px-3.5 sm:py-2 rounded-lg sm:rounded-xl bg-black/60 border border-white/15 text-white placeholder-white/30 text-xs font-sans focus:outline-none focus:border-[#eb5424] focus:ring-1 focus:ring-[#eb5424] transition-all resize-none"
                   />
                 </div>
 
                 {/* Submit Button Centered */}
-                <div className="flex justify-center pt-2">
+                <div className="flex justify-center pt-2 sm:pt-3">
                   <MagneticButton strength={0.2}>
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="px-10 sm:px-14 py-4 rounded-xl bg-[#eb5424] hover:bg-[#f04c1a] text-white font-mono text-xs font-black uppercase tracking-widest flex items-center justify-center gap-2 transition-all shadow-xl hover:shadow-[0_0_25px_rgba(235,84,36,0.4)] disabled:opacity-50 cursor-pointer"
+                      className="px-8 sm:px-12 py-2.5 sm:py-3.5 rounded-xl bg-[#eb5424] hover:bg-[#f04c1a] text-white font-mono text-xs font-black uppercase tracking-widest flex items-center justify-center gap-2 transition-all shadow-xl hover:shadow-[0_0_25px_rgba(235,84,36,0.4)] disabled:opacity-50 cursor-pointer"
                     >
                       {isSubmitting ? (
                         <span>SUBMITTING...</span>
