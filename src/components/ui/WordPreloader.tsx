@@ -17,6 +17,17 @@ export function WordPreloader({ onComplete }: WordPreloaderProps) {
     setMounted(true);
   }, []);
 
+  // Lock body scroll while preloader is active
+  useEffect(() => {
+    if (!isFinished) {
+      const prevOverflow = document.body.style.overflow;
+      document.body.style.overflow = "hidden";
+      return () => {
+        document.body.style.overflow = prevOverflow;
+      };
+    }
+  }, [isFinished]);
+
   // Skip handler (click, ESC, or Space)
   const handleSkip = () => {
     setIsFinished(true);
@@ -61,7 +72,7 @@ export function WordPreloader({ onComplete }: WordPreloaderProps) {
     };
   }, [isFinished, onComplete]);
 
-  if (!mounted) return null;
+  if (isFinished) return null;
 
   return (
     <AnimatePresence>
@@ -77,7 +88,13 @@ export function WordPreloader({ onComplete }: WordPreloaderProps) {
             },
           }}
           onClick={handleSkip}
-          className="fixed inset-0 z-[9999] bg-[#000000] text-white flex flex-col items-center justify-between p-6 sm:p-12 select-none cursor-pointer"
+          className="fixed inset-0 z-[99999] bg-[#000000] text-white flex flex-col items-center justify-between p-6 sm:p-12 select-none cursor-pointer"
+          style={{
+            position: "fixed",
+            inset: 0,
+            zIndex: 99999,
+            backgroundColor: "#000000",
+          }}
         >
           {/* Top Bar: Minimal system label & ESC indicator */}
           <div className="w-full flex items-center justify-between text-white/30 text-[10px] sm:text-xs font-mono">

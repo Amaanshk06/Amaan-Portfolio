@@ -47,7 +47,14 @@ export default function Home() {
       {/* Kinetic Typewriter Preloader with Smooth Crossfade Reveal */}
       <WordPreloader onComplete={() => setIsPreloaderComplete(true)} />
 
-      <div className="min-h-screen bg-white text-[#0a0a0a] font-sans selection:bg-[#eb5424] selection:text-white relative overflow-x-hidden">
+      <div
+        style={{
+          opacity: isPreloaderComplete ? 1 : 0,
+          pointerEvents: isPreloaderComplete ? "auto" : "none",
+          transition: "opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1)",
+        }}
+        className="min-h-screen bg-white text-[#0a0a0a] font-sans selection:bg-[#eb5424] selection:text-white relative overflow-x-hidden"
+      >
         {/* Fullscreen Ambient 3D Three.js WebGL Canvas across the whole site */}
         <AmbientFramer3D />
 
